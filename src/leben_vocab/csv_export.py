@@ -5,10 +5,10 @@ from leben_vocab.vocabulary import VocabularyItem
 
 CSV_COLUMNS = [
     "word",
-    "type",
     "display",
     "translation",
     "example",
+    "type",
     "example_source",
     "question_id",
     "count",

@@ -96,7 +96,7 @@ known translations without calling providers again.
 CSV output columns are:
 
 ```text
-word,type,display,translation,example,example_source,question_id,count,target_language
+word,display,translation,example,type,example_source,question_id,count,target_language
 ```
 
 Rows are sorted by `count` descending, and every row includes the requested

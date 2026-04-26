@@ -124,10 +124,10 @@ def test_fixture_export_writes_berlin_english_csv(tmp_path):
 
     assert reader.fieldnames == [
         "word",
-        "type",
         "display",
         "translation",
         "example",
+        "type",
         "example_source",
         "question_id",
         "count",
@@ -170,10 +170,10 @@ def test_fixture_export_writes_bayern_farsi_csv(tmp_path):
 
     assert reader.fieldnames == [
         "word",
-        "type",
         "display",
         "translation",
         "example",
+        "type",
         "example_source",
         "question_id",
         "count",
