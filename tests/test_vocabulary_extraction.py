@@ -82,6 +82,29 @@ def test_spacy_verb_lemma_deduplicates_conjugated_forms():
     assert by_word["wählen"].example == "Die Bürger wählen."
 
 
+def test_contextual_spacy_lemma_counts_different_verb_forms_together():
+    questions = [
+        Question(
+            id="1",
+            state=None,
+            text="Ich wähle. Du wählst. Sie wählte. Wir haben gewählt.",
+            options=(AnswerOption(id="a", text="Sie wählen."),),
+        )
+    ]
+
+    items = extract_vocabulary(
+        questions,
+        [AnswerKey(question_id="1", correct_option_id="a")],
+        normalizer=GermanVocabularyNormalizer(
+            analyzer=SpacyGermanAnalyzer(ContextualFakeSpacyModel()),
+        ),
+    )
+
+    by_word = {item.word: item for item in items}
+    assert by_word["wählen"].count == 5
+    assert "wählst" not in by_word
+
+
 def test_german_noun_lookup_formats_article_and_plural_with_fallbacks():
     normalizer = GermanVocabularyNormalizer(
         noun_lookup=GermanNounLookup(
@@ -96,6 +119,38 @@ def test_german_noun_lookup_formats_article_and_plural_with_fallbacks():
     assert normalizer.normalize("Staat") == ("staat", "noun", "der Staat, Staaten")
     assert normalizer.normalize("Wappen") == ("wappen", "noun", "Wappen")
     assert normalizer.normalize("Bürger") == ("bürger", "noun", "der Bürger")
+
+
+def test_german_noun_lookup_prefers_lemma_entry_for_plural_surface():
+    normalizer = GermanVocabularyNormalizer(
+        noun_lookup=GermanNounLookup(FakeGermanNounsWithPluralCollision())
+    )
+
+    assert normalizer.normalize("Wahlen") == ("wahl", "noun", "die Wahl, Wahlen")
+
+
+def test_compound_nouns_count_the_compound_and_its_parts():
+    questions = [
+        Question(
+            id="1",
+            state=None,
+            text="Die Bundestagswahl und die Wahlbenachrichtigung.",
+            options=(AnswerOption(id="a", text="die Wahl"),),
+        )
+    ]
+
+    items = extract_vocabulary(
+        questions,
+        [AnswerKey(question_id="1", correct_option_id="a")],
+        normalizer=GermanVocabularyNormalizer(
+            noun_lookup=GermanNounLookup(FakeGermanNounsWithCompounds()),
+        ),
+    )
+
+    by_word = {item.word: item for item in items}
+    assert by_word["bundestagswahl"].count == 1
+    assert by_word["wahlbenachrichtigung"].count == 1
+    assert by_word["wahl"].count == 3
 
 
 def test_extraction_counts_items_and_keeps_one_traceable_example():
@@ -194,3 +249,97 @@ class FakeToken:
         }.get(self.text.lower(), self.text.lower())
         self.pos_ = "VERB" if self.lemma_ == "wählen" else "NOUN"
         self.is_alpha = self.text.isalpha()
+
+
+class ContextualFakeSpacyModel:
+    def __call__(self, text):
+        return [ContextualFakeToken(token, text) for token in text.split()]
+
+
+class ContextualFakeToken:
+    def __init__(self, text, context):
+        self.text = text.strip(".")
+        normalized = self.text.lower()
+        self.lemma_ = {
+            "wähle": "wählen",
+            "wählt": "wählen",
+            "wählte": "wählen",
+            "gewählt": "wählen",
+            "wählen": "wählen",
+        }.get(normalized, normalized)
+        if normalized == "wählst" and context != "wählst":
+            self.lemma_ = "wählen"
+        self.pos_ = "VERB" if self.lemma_ == "wählen" or normalized == "wählst" else "NOUN"
+        self.is_alpha = self.text.isalpha()
+
+
+class FakeGermanNounsWithPluralCollision:
+    def __getitem__(self, key):
+        entries = {
+            "Wahlen": [
+                {"lemma": "Wahlen", "pos": ["Substantiv"], "flexion": {}},
+                {
+                    "lemma": "Wahl",
+                    "genus": "f",
+                    "pos": ["Substantiv"],
+                    "flexion": {
+                        "nominativ singular": "Wahl",
+                        "nominativ plural": "Wahlen",
+                    },
+                },
+            ],
+        }
+        return entries.get(key, [])
+
+
+class FakeGermanNounsWithCompounds:
+    def __getitem__(self, key):
+        entries = {
+            "Bundestagswahl": [
+                {
+                    "lemma": "Bundestagswahl",
+                    "genus": "f",
+                    "flexion": {
+                        "nominativ singular": "Bundestagswahl",
+                        "nominativ plural": "Bundestagswahlen",
+                    },
+                }
+            ],
+            "Wahlbenachrichtigung": [
+                {
+                    "lemma": "Wahlbenachrichtigung",
+                    "genus": "f",
+                    "flexion": {
+                        "nominativ singular": "Wahlbenachrichtigung",
+                        "nominativ plural": "Wahlbenachrichtigungen",
+                    },
+                }
+            ],
+            "Wahl": [
+                {
+                    "lemma": "Wahl",
+                    "genus": "f",
+                    "flexion": {
+                        "nominativ singular": "Wahl",
+                        "nominativ plural": "Wahlen",
+                    },
+                }
+            ],
+            "Benachrichtigung": [
+                {
+                    "lemma": "Benachrichtigung",
+                    "genus": "f",
+                    "flexion": {
+                        "nominativ singular": "Benachrichtigung",
+                        "nominativ plural": "Benachrichtigungen",
+                    },
+                }
+            ],
+        }
+        return entries.get(key, [])
+
+    def parse_compound(self, token):
+        return {
+            "Bundestagswahl": ["Bundestag", "Wahl"],
+            "Wahlbenachrichtigung": ["Wahl", "Benachrichtigung"],
+        }.get(token, [])

@@ -99,10 +99,12 @@ CSV output columns are:
 word,display,translation,example,type,example_source,question_id,count,target_language
 ```
 
-Rows are sorted by `count` descending, and every row includes the requested
-target language list. When multiple target languages are requested, the
-`translation` cell contains translations in the same order, separated by
-` , `, for example `to live , زندگی کردن`.
+Rows are sorted by `count` descending. Counts are based on normalized forms, so
+verb conjugations, noun plurals/cases, and detected noun compound parts count
+toward the same lemma. Every row includes the requested target language list.
+When multiple target languages are requested, the `translation` cell contains
+translations in the same order, separated by ` , `, for example
+`to live , زندگی کردن`.
 
 ## Run Tests
 

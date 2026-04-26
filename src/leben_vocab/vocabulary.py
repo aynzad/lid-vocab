@@ -58,6 +58,19 @@ class SpacyGermanAnalyzer:
             pos=getattr(parsed, "pos_", ""),
         )
 
+    def analyze_text(self, text: str) -> list[AnalyzedToken] | None:
+        if self._model is None:
+            return None
+        return [
+            AnalyzedToken(
+                text=getattr(token, "text", ""),
+                lemma=(getattr(token, "lemma_", "") or getattr(token, "text", "")).lower(),
+                pos=getattr(token, "pos_", ""),
+            )
+            for token in self._model(text)
+            if getattr(token, "is_alpha", True)
+        ]
+
     @staticmethod
     def _load_model() -> Any | None:
         try:
@@ -97,8 +110,24 @@ class GermanNounLookup:
             except (KeyError, TypeError):
                 continue
             if entries:
-                return _noun_form_from_german_nouns_entry(entries[0])
+                return _noun_form_from_german_nouns_entry(
+                    _best_german_nouns_entry(entries)
+                )
         return None
+
+    def compound_parts(self, token: str) -> list[str]:
+        if self._nouns is None or isinstance(self._nouns, dict):
+            return []
+        parse_compound = getattr(self._nouns, "parse_compound", None)
+        if parse_compound is None:
+            return []
+        try:
+            parts = parse_compound(token)
+        except (KeyError, TypeError):
+            return []
+        if len(parts) < 2:
+            return []
+        return parts
 
     @staticmethod
     def _load_nouns() -> Any | None:
@@ -121,25 +150,55 @@ class GermanVocabularyNormalizer:
         }
     )
     include_unknown: bool = False
-    _cache: dict[str, tuple[str, str, str] | None] = field(default_factory=dict)
+    _cache: dict[tuple[str, str | None, str | None], tuple[str, str, str] | None] = field(default_factory=dict)
 
     def normalize(self, token: str) -> tuple[str, str, str] | None:
-        if token in self._cache:
-            return self._cache[token]
-
-        normalized = token.lower()
         analyzed = self.analyzer.analyze(token) if self.analyzer else None
+        return self._normalize_token(token, analyzed)
+
+    def normalize_text(self, text: str) -> list[tuple[str, str, str]]:
+        analyzed_tokens = self.analyzer.analyze_text(text) if self.analyzer else None
+        tokens = analyzed_tokens or [
+            AnalyzedToken(text=token, lemma="", pos="") for token in _tokens(text)
+        ]
+        normalizations: list[tuple[str, str, str]] = []
+        for token in tokens:
+            normalized = self._normalize_token(token.text, token)
+            if normalized is None:
+                continue
+            normalizations.append(normalized)
+            if (
+                normalized[1] == "noun"
+                and normalized[0] == token.text.lower()
+                and len(token.text) >= 10
+            ):
+                normalizations.extend(
+                    self._compound_part_normalizations(token.text, normalized[0])
+                )
+        return normalizations
+
+    def _normalize_token(
+        self, token: str, analyzed: AnalyzedToken | None
+    ) -> tuple[str, str, str] | None:
+        cache_key = (
+            token,
+            analyzed.lemma if analyzed and analyzed.lemma else None,
+            analyzed.pos if analyzed and analyzed.pos else None,
+        )
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+        normalized = token.lower()
         if analyzed and analyzed.pos in {"VERB", "AUX"}:
-            return self._remember(token, (analyzed.lemma, "verb", analyzed.lemma))
+            return self._remember(cache_key, (analyzed.lemma, "verb", analyzed.lemma))
 
         verb = self.verb_lemmas.get(normalized)
         if verb is not None:
-            return self._remember(token, (verb, "verb", verb))
+            return self._remember(cache_key, (verb, "verb", verb))
 
         noun = self.noun_lookup.lookup(token) if self.noun_lookup else None
         if noun is not None:
             return self._remember(
-                token,
+                cache_key,
                 (
                     noun.lemma.lower(),
                     "noun",
@@ -151,20 +210,34 @@ class GermanVocabularyNormalizer:
         if noun_form is not None:
             article, display, plural = noun_form
             return self._remember(
-                token,
+                cache_key,
                 (normalized, "noun", _format_noun_display(article, display, plural)),
             )
 
         if self.include_unknown and len(normalized) > 2 and normalized not in STOPWORDS:
             lemma = analyzed.lemma if analyzed and analyzed.lemma else normalized
-            return self._remember(token, (lemma, "word", token))
+            return self._remember(cache_key, (lemma, "word", token))
 
-        return self._remember(token, None)
+        return self._remember(cache_key, None)
+
+    def _compound_part_normalizations(
+        self, token: str, normalized_word: str
+    ) -> list[tuple[str, str, str]]:
+        if self.noun_lookup is None:
+            return []
+        normalizations: list[tuple[str, str, str]] = []
+        for part in self.noun_lookup.compound_parts(token):
+            normalized = self.normalize(part)
+            if normalized is not None and normalized[0] != normalized_word:
+                normalizations.append(normalized)
+        return normalizations
 
     def _remember(
-        self, token: str, normalized: tuple[str, str, str] | None
+        self,
+        cache_key: tuple[str, str | None, str | None],
+        normalized: tuple[str, str, str] | None,
     ) -> tuple[str, str, str] | None:
-        self._cache[token] = normalized
+        self._cache[cache_key] = normalized
         return normalized
 
 
@@ -189,10 +262,7 @@ def extract_vocabulary(
             sources.append((correct_option.text, "answer"))
 
         for text, source in sources:
-            for token in _tokens(text):
-                normalized = normalizer.normalize(token)
-                if normalized is None:
-                    continue
+            for normalized in normalizer.normalize_text(text):
                 word, kind, display = normalized
                 counts[word] = _record_item(
                     existing=counts.get(word),
@@ -266,6 +336,17 @@ def _noun_form_from_german_nouns_entry(entry: dict[str, Any]) -> NounForm:
         article=genus_to_article.get(entry.get("genus")),
         plural=flexion.get("nominativ plural"),
     )
+
+
+def _best_german_nouns_entry(entries: list[dict[str, Any]]) -> dict[str, Any]:
+    def score(entry: dict[str, Any]) -> tuple[int, int]:
+        flexion = entry.get("flexion", {})
+        return (
+            int(bool(entry.get("genus"))) + int(bool(flexion.get("nominativ singular"))),
+            int(bool(flexion.get("nominativ plural"))),
+        )
+
+    return max(entries, key=score)
 
 
 def _noun_candidates(token: str) -> list[str]:
