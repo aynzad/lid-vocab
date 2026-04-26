@@ -57,6 +57,12 @@ def test_default_blacklist_covers_common_names_places_and_cognates():
         "dänemark",
         "köln",
         "schweiz",
+        "schweden",
+        "schwede",
+        "schwedisch",
+        "schweizen",
+        "schweizerisch",
         "türkei",
+        "türkisch",
         "ägypten",
     } <= blacklist.words
