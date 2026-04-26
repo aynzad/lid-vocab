@@ -29,6 +29,7 @@ class FixtureAnswerProvider:
         self._answers = answers or [
             StructuredAnswer(question_id="1", correct_option_id="a"),
             StructuredAnswer(question_id="BE-1", correct_option_id="a"),
+            StructuredAnswer(question_id="BY-1", correct_option_id="a"),
         ]
 
     def load_answer_keys(self) -> list[StructuredAnswer]:
