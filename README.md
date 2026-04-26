@@ -58,19 +58,19 @@ If DeepL is unavailable or rate-limited, the exporter falls back to the
 Export an English CSV for Berlin:
 
 ```sh
-.venv/bin/leben-vocab export --state Berlin --target-lang en --output words_en.csv
+.venv/bin/lid-vocab export --state Berlin --target-lang en --output words_en.csv
 ```
 
 Export English and Farsi translations in the same CSV cell, in that order:
 
 ```sh
-.venv/bin/leben-vocab export --state Berlin --target-lang en,fa --output words_en_fa.csv
+.venv/bin/lid-vocab export --state Berlin --target-lang en,fa --output words_en_fa.csv
 ```
 
 Export a Farsi CSV for Bayern:
 
 ```sh
-.venv/bin/leben-vocab export --state Bayern --target-lang fa --output words_fa.csv
+.venv/bin/lid-vocab export --state Bayern --target-lang fa --output words_fa.csv
 ```
 
 Generated CSV files are written under `dist/`. If `--output` is a relative file

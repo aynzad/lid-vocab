@@ -1,7 +1,7 @@
 # Leben Vocab Python Project
 
 ## Summary
-- Build a greenfield Python package in `/Users/aesfahani/Work/lid-vocab` with `src/leben_vocab` layout and CLI entry point `leben-vocab`.
+- Build a greenfield Python package in `/Users/aesfahani/Work/lid-vocab` with `src/leben_vocab` layout and CLI entry point `lid-vocab`.
 - Use committed `/Users/aesfahani/Work/lid-vocab/lid2026.pdf` as the official BAMF source of question wording and options. No v1 download command.
 - Use the MIT GitHub 460-question JSON as the default structured answer provider, pinned by commit, only for correct answer letters.
 - Load DeepL credentials from `.env`; the existing key is named `deepl_api_key`, so config should support both `DEEPL_API_KEY` and `deepl_api_key`, with uppercase env taking precedence.
@@ -19,8 +19,8 @@
   - Noun formatting via `german-nouns`, with best-effort article/plural fallback when incomplete.
   - Translation cache keyed by normalized word/type/target language/provider.
 - CLI:
-  - `leben-vocab export --state Berlin --target-lang en --output words_en.csv`
-  - `leben-vocab export --state Bayern --target-lang fa --output words_fa.csv`
+  - `lid-vocab export --state Berlin --target-lang en --output words_en.csv`
+  - `lid-vocab export --state Bayern --target-lang fa --output words_fa.csv`
 
 ## Public Contracts
 - CSV columns exactly: `word,type,display,translation,example,example_source,question_id,count,target_language`.

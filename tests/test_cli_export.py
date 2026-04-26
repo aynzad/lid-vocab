@@ -104,8 +104,8 @@ def test_main_prints_export_progress_to_stderr(monkeypatch, capsys):
 
     captured = capsys.readouterr()
     assert captured.err.splitlines() == [
-        "[leben-vocab] parse corpus",
-        "[leben-vocab] write csv",
+        "[lid-vocab] parse corpus",
+        "[lid-vocab] write csv",
     ]
 
 

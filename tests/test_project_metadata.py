@@ -5,8 +5,8 @@ from pathlib import Path
 def test_project_declares_package_shape_and_console_entry_point():
     pyproject = tomllib.loads(Path("pyproject.toml").read_text(encoding="utf-8"))
 
-    assert pyproject["project"]["name"] == "leben-vocab"
-    assert pyproject["project"]["scripts"]["leben-vocab"] == "leben_vocab.cli:main"
+    assert pyproject["project"]["name"] == "lid-vocab"
+    assert pyproject["project"]["scripts"]["lid-vocab"] == "leben_vocab.cli:main"
     assert pyproject["tool"]["hatch"]["build"]["targets"]["wheel"]["packages"] == [
         "src/leben_vocab"
     ]

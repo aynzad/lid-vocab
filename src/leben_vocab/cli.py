@@ -6,7 +6,7 @@ from leben_vocab.export import export_vocabulary
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="leben-vocab")
+    parser = argparse.ArgumentParser(prog="lid-vocab")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     export_parser = subparsers.add_parser("export")
@@ -40,4 +40,4 @@ def _target_languages(value: str) -> list[str]:
 
 
 def _print_progress(message: str) -> None:
-    print(f"[leben-vocab] {message}", file=sys.stderr, flush=True)
+    print(f"[lid-vocab] {message}", file=sys.stderr, flush=True)
