@@ -48,4 +48,15 @@ def test_filter_blacklisted_items_removes_only_matching_normalized_words():
 def test_default_blacklist_covers_common_names_places_and_cognates():
     blacklist = VocabularyBlacklist.from_path()
 
-    assert {"berlin", "friedrich", "usa", "integration", "universität"} <= blacklist.words
+    assert {
+        "berlin",
+        "friedrich",
+        "usa",
+        "integration",
+        "universität",
+        "dänemark",
+        "köln",
+        "schweiz",
+        "türkei",
+        "ägypten",
+    } <= blacklist.words
