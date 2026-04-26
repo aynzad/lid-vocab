@@ -20,6 +20,7 @@ def write_vocabulary_csv(
     items: list[VocabularyItem], target_language: str, output_path: Path
 ) -> None:
     rows = sorted(items, key=lambda item: (-item.count, item.word))
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", newline="", encoding="utf-8") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=CSV_COLUMNS)
         writer.writeheader()

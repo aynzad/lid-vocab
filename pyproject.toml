@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "leben-vocab"
 version = "0.1.0"
 description = "Export Leben in Deutschland vocabulary study CSVs."
-readme = "plans/2026-04-26-leben-vocab-python-project.md"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = ["pymupdf>=1.27"]
 

@@ -4,7 +4,7 @@ from leben_vocab.cli import main
 
 
 def test_export_command_writes_berlin_english_fixture_csv(tmp_path):
-    output_path = tmp_path / "words_en.csv"
+    output_path = tmp_path / "dist" / "words_en.csv"
 
     exit_code = main(
         [
