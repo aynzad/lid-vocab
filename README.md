@@ -67,6 +67,14 @@ Export English and Farsi translations in the same CSV cell, in that order:
 .venv/bin/lid-vocab export --state Berlin --target-lang en,fa --output words_en_fa.csv
 ```
 
+By default, exports keep only rows with a count of 2 or higher. Use
+`--min-count` to make the list shorter or pass `--min-count 1` to keep
+singletons:
+
+```sh
+.venv/bin/lid-vocab export --state Berlin --target-lang en,fa --output words_en_fa.csv --min-count 3
+```
+
 Export a Farsi CSV for Bayern:
 
 ```sh

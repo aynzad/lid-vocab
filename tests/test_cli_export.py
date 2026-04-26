@@ -32,6 +32,7 @@ def test_main_delegates_to_official_export(monkeypatch, tmp_path):
             "state": "Berlin",
             "target_languages": ["en"],
             "output_path": output_path,
+            "min_count": 2,
             "progress": ANY,
         }
     ]
@@ -81,6 +82,31 @@ def test_main_preserves_ordered_target_language_list(monkeypatch):
     )
 
     assert calls[0]["target_languages"] == ["en", "fa"]
+
+
+def test_main_passes_custom_min_count(monkeypatch):
+    calls = []
+
+    def fake_export_vocabulary(**kwargs):
+        calls.append(kwargs)
+
+    monkeypatch.setattr("leben_vocab.cli.export_vocabulary", fake_export_vocabulary)
+
+    main(
+        [
+            "export",
+            "--state",
+            "Berlin",
+            "--target-lang",
+            "en",
+            "--output",
+            "words.csv",
+            "--min-count",
+            "4",
+        ]
+    )
+
+    assert calls[0]["min_count"] == 4
 
 
 def test_main_prints_export_progress_to_stderr(monkeypatch, capsys):

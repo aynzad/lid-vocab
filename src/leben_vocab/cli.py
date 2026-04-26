@@ -13,6 +13,7 @@ def main(argv: list[str] | None = None) -> int:
     export_parser.add_argument("--state", default="Berlin")
     export_parser.add_argument("--target-lang", required=True)
     export_parser.add_argument("--output", required=True, type=Path)
+    export_parser.add_argument("--min-count", default=2, type=int)
 
     args = parser.parse_args(argv)
     if args.command == "export":
@@ -20,6 +21,7 @@ def main(argv: list[str] | None = None) -> int:
             state=args.state,
             target_languages=_target_languages(args.target_lang),
             output_path=_dist_output_path(args.output),
+            min_count=args.min_count,
             progress=_print_progress,
         )
         return 0

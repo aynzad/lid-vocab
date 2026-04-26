@@ -67,13 +67,16 @@ def test_official_export_uses_pdf_corpus_and_writes_many_rows_with_step_log(tmp_
         "extract_vocabulary",
         "filter_vocabulary",
         "merge_vocabulary",
+        "filter_min_count",
         "translate_vocabulary",
         "write_csv",
     ]
     assert log_entries[0]["question_count"] == 460
     assert log_entries[1]["selected_question_count"] == 310
-    assert log_entries[6]["vocabulary_count"] == len(rows)
-    assert log_entries[7]["provider"] == "fixture"
+    assert log_entries[7]["vocabulary_count"] == len(rows)
+    assert log_entries[7]["min_count"] == 2
+    assert log_entries[8]["provider"] == "fixture"
+    assert all(int(row["count"]) >= 2 for row in rows)
 
 
 class OrderedTranslationProvider:
@@ -127,3 +130,33 @@ def test_export_filters_blacklisted_words_before_translation(tmp_path):
     assert "deutschland" not in words
     assert "die" not in words
     assert "leben" in words
+
+
+def test_export_filters_words_below_custom_min_count_before_translation(tmp_path):
+    output_path = tmp_path / "dist" / "words.csv"
+    log_path = tmp_path / "dist" / "logs" / "words.jsonl"
+
+    export_vocabulary(
+        state="Berlin",
+        target_language="en",
+        output_path=output_path,
+        answer_provider=SelectedQuestionAnswerProvider("Berlin"),
+        translation_provider=FixtureTranslationProvider(),
+        log_path=log_path,
+        min_count=5,
+    )
+
+    with output_path.open(newline="", encoding="utf-8") as csv_file:
+        rows = list(csv.DictReader(csv_file))
+
+    log_entries = [
+        json.loads(line) for line in log_path.read_text(encoding="utf-8").splitlines()
+    ]
+    min_count_log = next(
+        entry for entry in log_entries if entry["step"] == "filter_min_count"
+    )
+
+    assert rows
+    assert all(int(row["count"]) >= 5 for row in rows)
+    assert min_count_log["min_count"] == 5
+    assert min_count_log["filtered_count"] > 0

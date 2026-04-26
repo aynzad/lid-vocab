@@ -67,6 +67,7 @@ def export_vocabulary(
     log_path: Path | None = None,
     progress: Callable[[str], None] | None = None,
     blacklist: VocabularyBlacklist | None = None,
+    min_count: int = 2,
 ) -> None:
     answer_provider = answer_provider or PinnedGitHubAnswerProvider()
     translation_provider = translation_provider or build_production_translation_router()
@@ -126,6 +127,20 @@ def export_vocabulary(
         merged_count=merged_count,
     )
 
+    unthresholded_count = len(items)
+    items = _filter_min_count_items(items, min_count)
+    min_count_filtered_count = unthresholded_count - len(items)
+    emit_progress(
+        f"Filtering vocabulary by count >= {min_count} "
+        f"({min_count_filtered_count} removed)"
+    )
+    step_log.write(
+        "filter_min_count",
+        vocabulary_count=len(items),
+        filtered_count=min_count_filtered_count,
+        min_count=min_count,
+    )
+
     emit_progress(
         f"Translating {len(items)} vocabulary rows to {', '.join(languages)}"
     )
@@ -141,6 +156,10 @@ def export_vocabulary(
     write_vocabulary_csv(translated_items, target_language_label, output_path)
     step_log.write("write_csv", output_path=str(output_path), row_count=len(translated_items))
     emit_progress(f"Done: wrote {len(translated_items)} rows")
+
+
+def _filter_min_count_items(items, min_count: int):
+    return [item for item in items if item.count >= min_count]
 
 
 def _translate_items(
