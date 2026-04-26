@@ -2,6 +2,10 @@ from pathlib import Path
 import json
 from typing import Any, Callable
 
+from leben_vocab.blacklist import (
+    VocabularyBlacklist,
+    filter_blacklisted_items,
+)
 from leben_vocab.answers import (
     FixtureAnswerProvider,
     PinnedGitHubAnswerProvider,
@@ -61,6 +65,7 @@ def export_vocabulary(
     normalizer: GermanVocabularyNormalizer | None = None,
     log_path: Path | None = None,
     progress: Callable[[str], None] | None = None,
+    blacklist: VocabularyBlacklist | None = None,
 ) -> None:
     answer_provider = answer_provider or PinnedGitHubAnswerProvider()
     translation_provider = translation_provider or build_production_translation_router()
@@ -73,6 +78,7 @@ def export_vocabulary(
     )
     step_log = ExportStepLog(log_path or _default_log_path(output_path))
     emit_progress = progress or _ignore_progress
+    blacklist = blacklist or VocabularyBlacklist.from_path()
 
     emit_progress(f"Parsing corpus from {pdf_path}")
     questions = parse_official_questions(pdf_path)
@@ -97,6 +103,17 @@ def export_vocabulary(
     emit_progress("Extracting vocabulary")
     items = extract_vocabulary(selected_questions, answer_keys, normalizer=normalizer)
     step_log.write("extract_vocabulary", vocabulary_count=len(items))
+
+    unfiltered_count = len(items)
+    items = filter_blacklisted_items(items, blacklist)
+    filtered_count = unfiltered_count - len(items)
+    emit_progress(f"Filtering vocabulary blacklist ({filtered_count} removed)")
+    step_log.write(
+        "filter_vocabulary",
+        vocabulary_count=len(items),
+        filtered_count=filtered_count,
+        blacklist_path=str(blacklist.source_path) if blacklist.source_path else None,
+    )
 
     emit_progress(
         f"Translating {len(items)} vocabulary rows to {', '.join(languages)}"

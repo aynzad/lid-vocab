@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 from leben_vocab.answers import StructuredAnswer
+from leben_vocab.blacklist import VocabularyBlacklist
 from leben_vocab.export import export_vocabulary
 from leben_vocab.official_corpus import parse_official_questions, select_questions_for_state
 from leben_vocab.translation import FixtureTranslationProvider
@@ -64,13 +65,14 @@ def test_official_export_uses_pdf_corpus_and_writes_many_rows_with_step_log(tmp_
         "load_answers",
         "match_answers",
         "extract_vocabulary",
+        "filter_vocabulary",
         "translate_vocabulary",
         "write_csv",
     ]
     assert log_entries[0]["question_count"] == 460
     assert log_entries[1]["selected_question_count"] == 310
-    assert log_entries[4]["vocabulary_count"] == len(rows)
-    assert log_entries[5]["provider"] == "fixture"
+    assert log_entries[5]["vocabulary_count"] == len(rows)
+    assert log_entries[6]["provider"] == "fixture"
 
 
 class OrderedTranslationProvider:
@@ -102,3 +104,25 @@ def test_export_joins_multiple_translations_in_requested_language_order(tmp_path
 
     assert leben["translation"] == "to live , زندگی کردن"
     assert leben["target_language"] == "en,fa"
+
+
+def test_export_filters_blacklisted_words_before_translation(tmp_path):
+    output_path = tmp_path / "dist" / "words.csv"
+
+    export_vocabulary(
+        state="Berlin",
+        target_languages=["en", "fa"],
+        output_path=output_path,
+        answer_provider=SelectedQuestionAnswerProvider("Berlin"),
+        translation_provider=OrderedTranslationProvider(),
+        normalizer=None,
+        log_path=tmp_path / "dist" / "logs" / "words.jsonl",
+        blacklist=VocabularyBlacklist(frozenset({"deutschland", "die"})),
+    )
+
+    with output_path.open(newline="", encoding="utf-8") as csv_file:
+        words = {row["word"] for row in csv.DictReader(csv_file)}
+
+    assert "deutschland" not in words
+    assert "die" not in words
+    assert "leben" in words
