@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import difflib
 import json
 import re
 from typing import Any, Callable
@@ -18,6 +19,8 @@ class StructuredAnswer:
     question_id: str
     correct_option_id: str
     question_text: str = ""
+    correct_answer_text: str = ""
+    prefer_id: bool = True
 
 
 class AnswerMatchingError(ValueError):
@@ -60,7 +63,9 @@ class PinnedGitHubAnswerProvider:
 def match_answer_keys(
     questions: list[Question], answers: list[StructuredAnswer]
 ) -> list[AnswerKey]:
-    answers_by_id = {answer.question_id: answer for answer in answers}
+    answers_by_id = {
+        answer.question_id: answer for answer in answers if answer.prefer_id
+    }
     answers_by_text = {
         _normalize_question_text(answer.question_text): answer
         for answer in answers
@@ -72,15 +77,14 @@ def match_answer_keys(
     for question in questions:
         answer = answers_by_id.get(question.id)
         if answer is None:
-            answer = answers_by_text.get(_normalize_question_text(question.text))
+            answer = _match_by_question_text(question, answers_by_text, answers)
         if answer is None:
             missing_question_ids.append(question.id)
             continue
-        _ensure_option_exists(question, answer.correct_option_id)
         matches.append(
             AnswerKey(
                 question_id=question.id,
-                correct_option_id=answer.correct_option_id,
+                correct_option_id=_resolve_correct_option_id(question, answer),
             )
         )
 
@@ -98,6 +102,108 @@ def _ensure_option_exists(question: Question, option_id: str) -> None:
         raise AnswerMatchingError(
             f"Question {question.id} references missing correct option {option_id!r}"
         )
+
+
+def _match_by_question_text(
+    question: Question,
+    answers_by_text: dict[str, StructuredAnswer],
+    answers: list[StructuredAnswer],
+) -> StructuredAnswer | None:
+    normalized_question = _normalize_question_text(question.text)
+    exact = answers_by_text.get(normalized_question)
+    if exact is not None:
+        return exact
+
+    scored_answers = sorted(
+        (
+            _score_answer_candidate(question, normalized_question, answer)
+            for answer in answers
+            if answer.question_text
+        ),
+        key=lambda item: item[0],
+        reverse=True,
+    )
+    if not scored_answers:
+        return None
+
+    best_score, question_score, option_score, best_answer = scored_answers[0]
+    second_score = scored_answers[1][0] if len(scored_answers) > 1 else 0.0
+    if question_score >= 0.82 and best_score - second_score >= 0.03:
+        return best_answer
+    if question_score >= 0.65 and option_score >= 0.70:
+        return best_answer
+    return None
+
+
+def _score_answer_candidate(
+    question: Question, normalized_question: str, answer: StructuredAnswer
+) -> tuple[float, float, float, StructuredAnswer]:
+    question_score = _question_similarity(
+        normalized_question,
+        _normalize_question_text(answer.question_text),
+    )
+    option_score = _best_option_score(question, answer.correct_answer_text)
+    return question_score + (0.2 * option_score), question_score, option_score, answer
+
+
+def _best_option_score(question: Question, correct_answer_text: str) -> float:
+    normalized_answer = _normalize_question_text(correct_answer_text)
+    if not normalized_answer:
+        return 0.0
+    scores = [
+        _question_similarity(normalized_answer, _normalize_question_text(option.text))
+        for option in question.options
+        if option.text
+    ]
+    return max(scores, default=0.0)
+
+
+def _resolve_correct_option_id(question: Question, answer: StructuredAnswer) -> str:
+    if answer.correct_answer_text:
+        option_id = _match_correct_answer_text(question, answer.correct_answer_text)
+        if option_id is not None:
+            return option_id
+
+    _ensure_option_exists(question, answer.correct_option_id)
+    return answer.correct_option_id
+
+
+def _match_correct_answer_text(
+    question: Question, correct_answer_text: str
+) -> str | None:
+    normalized_answer = _normalize_question_text(correct_answer_text)
+    if normalized_answer.startswith("bild "):
+        return None
+
+    scored_options = sorted(
+        (
+            (
+                _question_similarity(
+                    normalized_answer, _normalize_question_text(option.text)
+                ),
+                option.id,
+            )
+            for option in question.options
+            if option.text
+        ),
+        key=lambda item: item[0],
+        reverse=True,
+    )
+    if not scored_options:
+        return None
+
+    best_score, option_id = scored_options[0]
+    if best_score >= 0.70:
+        return option_id
+    return None
+
+
+def _question_similarity(left: str, right: str) -> float:
+    plain = difflib.SequenceMatcher(None, left, right).ratio()
+    sorted_left = " ".join(sorted(left.split()))
+    sorted_right = " ".join(sorted(right.split()))
+    sorted_ratio = difflib.SequenceMatcher(None, sorted_left, sorted_right).ratio()
+    return max(plain, sorted_ratio)
 
 
 def _normalize_question_text(text: str) -> str:
@@ -128,6 +234,7 @@ def _structured_answer_from_record(record: dict[str, Any]) -> StructuredAnswer:
         or ""
     ).lower()
     question_text = str(record.get("question") or record.get("question_text") or "")
+    correct_answer_text = str(record.get(correct_option_id) or "")
     if not question_id or correct_option_id not in {"a", "b", "c", "d"}:
         raise AnswerMatchingError(
             f"Structured answer record is missing a usable id or answer: {record!r}"
@@ -136,4 +243,6 @@ def _structured_answer_from_record(record: dict[str, Any]) -> StructuredAnswer:
         question_id=question_id,
         correct_option_id=correct_option_id,
         question_text=question_text,
+        correct_answer_text=correct_answer_text,
+        prefer_id=False,
     )

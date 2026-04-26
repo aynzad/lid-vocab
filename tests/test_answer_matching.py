@@ -70,6 +70,54 @@ def test_answer_matching_falls_back_to_normalized_question_text():
     assert matches == [AnswerKey(question_id="17", correct_option_id="b")]
 
 
+def test_answer_matching_uses_correct_answer_text_to_resolve_similar_questions():
+    questions = [
+        Question(
+            id="143",
+            state=None,
+            text="Eine Richterin/ein Richter in Deutschland gehört zur …",
+            options=(
+                AnswerOption(id="a", text="Judikative."),
+                AnswerOption(id="b", text="Exekutive."),
+            ),
+        ),
+        Question(
+            id="144",
+            state=None,
+            text="Eine Richterin/ein Richter gehört in Deutschland zur …",
+            options=(
+                AnswerOption(id="a", text="vollziehenden Gewalt."),
+                AnswerOption(id="b", text="rechtsprechenden Gewalt."),
+            ),
+        ),
+    ]
+    provider = FixtureAnswerProvider(
+        [
+            StructuredAnswer(
+                question_id="third-party-199",
+                correct_option_id="a",
+                question_text="Ein Richter/eine Richterin in Deutschland gehört zur …",
+                correct_answer_text="Judikative",
+                prefer_id=False,
+            ),
+            StructuredAnswer(
+                question_id="third-party-204",
+                correct_option_id="a",
+                question_text="Ein Richter/eine Richterin gehört in Deutschland zur …",
+                correct_answer_text="rechtsprechenden Gewalt",
+                prefer_id=False,
+            ),
+        ]
+    )
+
+    matches = match_answer_keys(questions, provider.load_answer_keys())
+
+    assert matches == [
+        AnswerKey(question_id="143", correct_option_id="a"),
+        AnswerKey(question_id="144", correct_option_id="b"),
+    ]
+
+
 def test_answer_matching_fails_with_audit_friendly_diagnostics():
     questions = [
         Question(
@@ -98,7 +146,7 @@ def test_answer_matching_fails_with_audit_friendly_diagnostics():
         match_answer_keys(questions, provider.load_answer_keys())
 
 
-def test_pinned_github_provider_loads_only_correct_answer_letters():
+def test_pinned_github_provider_loads_correct_answer_data_for_matching_only():
     requested_urls = []
 
     def fetch_json(url):
@@ -120,6 +168,8 @@ def test_pinned_github_provider_loads_only_correct_answer_letters():
             question_id="1",
             correct_option_id="b",
             question_text="Third-party wording for matching fallback only",
+            correct_answer_text="Do not use this wording either",
+            prefer_id=False,
         )
     ]
     assert requested_urls == [PinnedGitHubAnswerProvider.SOURCE_URL]
