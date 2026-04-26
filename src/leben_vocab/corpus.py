@@ -5,6 +5,7 @@ from dataclasses import dataclass
 class AnswerOption:
     id: str
     text: str
+    is_image_only: bool = False
 
 
 @dataclass(frozen=True)
