@@ -18,6 +18,7 @@ class Question:
 
 class FixtureCorpusProvider:
     def load_questions(self, state: str) -> list[Question]:
+        state_code = _state_code(state)
         return [
             Question(
                 id="1",
@@ -29,7 +30,7 @@ class FixtureCorpusProvider:
                 ),
             ),
             Question(
-                id="BE-1",
+                id=f"{state_code}-1",
                 state=state,
                 text="Berlin hat ein Parlament.",
                 options=(
@@ -38,3 +39,10 @@ class FixtureCorpusProvider:
                 ),
             ),
         ]
+
+
+def _state_code(state: str) -> str:
+    return {
+        "Bayern": "BY",
+        "Berlin": "BE",
+    }.get(state, state[:2].upper())
