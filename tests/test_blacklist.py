@@ -65,4 +65,9 @@ def test_default_blacklist_covers_common_names_places_and_cognates():
         "türkei",
         "türkisch",
         "ägypten",
+        "muss",
+        "senator",
+        "françois",
+        "seger",
+        "polizei",
     } <= blacklist.words
