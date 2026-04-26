@@ -13,6 +13,7 @@ from leben_vocab.answers import (
 )
 from leben_vocab.corpus import FixtureCorpusProvider
 from leben_vocab.csv_export import write_vocabulary_csv
+from leben_vocab.merge import merge_related_items
 from leben_vocab.official_corpus import parse_official_questions, select_questions_for_state
 from leben_vocab.translation import (
     FixtureTranslationProvider,
@@ -113,6 +114,16 @@ def export_vocabulary(
         vocabulary_count=len(items),
         filtered_count=filtered_count,
         blacklist_path=str(blacklist.source_path) if blacklist.source_path else None,
+    )
+
+    unmerged_count = len(items)
+    items = merge_related_items(items, compound_lookup=normalizer.noun_lookup)
+    merged_count = unmerged_count - len(items)
+    emit_progress(f"Merging related vocabulary rows ({merged_count} merged)")
+    step_log.write(
+        "merge_vocabulary",
+        vocabulary_count=len(items),
+        merged_count=merged_count,
     )
 
     emit_progress(

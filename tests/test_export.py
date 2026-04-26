@@ -66,13 +66,14 @@ def test_official_export_uses_pdf_corpus_and_writes_many_rows_with_step_log(tmp_
         "match_answers",
         "extract_vocabulary",
         "filter_vocabulary",
+        "merge_vocabulary",
         "translate_vocabulary",
         "write_csv",
     ]
     assert log_entries[0]["question_count"] == 460
     assert log_entries[1]["selected_question_count"] == 310
-    assert log_entries[5]["vocabulary_count"] == len(rows)
-    assert log_entries[6]["provider"] == "fixture"
+    assert log_entries[6]["vocabulary_count"] == len(rows)
+    assert log_entries[7]["provider"] == "fixture"
 
 
 class OrderedTranslationProvider:
