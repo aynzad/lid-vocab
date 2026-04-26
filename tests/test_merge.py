@@ -37,7 +37,7 @@ def test_merges_inflected_word_variant_into_base_word():
     assert [(item.word, item.count) for item in merged] == [("ausländisch", 3)]
 
 
-def test_merges_compound_noun_into_highest_count_existing_part():
+def test_keeps_compound_noun_rows_separate_from_part_rows():
     merged = merge_related_items(
         [
             item("wahl", display="die Wahl, Wahlen", count=4),
@@ -48,7 +48,10 @@ def test_merges_compound_noun_into_highest_count_existing_part():
         ),
     )
 
-    assert [(item.word, item.count) for item in merged] == [("wahl", 6)]
+    assert [(item.word, item.count) for item in merged] == [
+        ("wahl", 4),
+        ("bundestagswahl", 2),
+    ]
 
 
 class FakeCompoundLookup:

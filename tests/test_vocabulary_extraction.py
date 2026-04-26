@@ -151,6 +151,31 @@ def test_compound_nouns_count_the_compound_and_its_parts():
     assert by_word["bundestagswahl"].count == 1
     assert by_word["wahlbenachrichtigung"].count == 1
     assert by_word["wahl"].count == 3
+    assert "benachrichtigung" not in by_word
+
+
+def test_compound_parts_never_create_new_rows_by_themselves():
+    questions = [
+        Question(
+            id="1",
+            state=None,
+            text="Deutschland",
+            options=(AnswerOption(id="a", text="Deutschland"),),
+        )
+    ]
+
+    items = extract_vocabulary(
+        questions,
+        [AnswerKey(question_id="1", correct_option_id="a")],
+        normalizer=GermanVocabularyNormalizer(
+            noun_lookup=GermanNounLookup(FakeGermanNounsWithBadCompoundParts()),
+        ),
+    )
+
+    by_word = {item.word: item for item in items}
+    assert by_word["deutschland"].count == 2
+    assert "deut" not in by_word
+    assert "schland" not in by_word
 
 
 def test_extraction_counts_items_and_keeps_one_traceable_example():
@@ -343,3 +368,43 @@ class FakeGermanNounsWithCompounds:
             "Bundestagswahl": ["Bundestag", "Wahl"],
             "Wahlbenachrichtigung": ["Wahl", "Benachrichtigung"],
         }.get(token, [])
+
+
+class FakeGermanNounsWithBadCompoundParts:
+    def __getitem__(self, key):
+        entries = {
+            "Deutschland": [
+                {
+                    "lemma": "Deutschland",
+                    "genus": "n",
+                    "flexion": {
+                        "nominativ singular": "Deutschland",
+                        "nominativ plural": "Deutschländer",
+                    },
+                }
+            ],
+            "Deut": [
+                {
+                    "lemma": "Deut",
+                    "genus": "m",
+                    "flexion": {
+                        "nominativ singular": "Deut",
+                        "nominativ plural": "Deute",
+                    },
+                }
+            ],
+            "Schland": [
+                {
+                    "lemma": "Schland",
+                    "genus": "n",
+                    "flexion": {
+                        "nominativ singular": "Schland",
+                        "nominativ plural": "Schländer",
+                    },
+                }
+            ],
+        }
+        return entries.get(key, [])
+
+    def parse_compound(self, token):
+        return {"Deutschland": ["Deut", "Schland"]}.get(token, [])

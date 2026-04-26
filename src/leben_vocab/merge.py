@@ -31,7 +31,6 @@ def _merge_target(
     return (
         _gender_pair_target(item, by_word)
         or _inflected_word_target(item, by_word)
-        or _compound_target(item, by_word, compound_lookup)
         or item.word
     )
 
@@ -61,33 +60,6 @@ def _inflected_word_target(
         if base is not None and base.kind == item.kind:
             return base.word
     return None
-
-
-def _compound_target(
-    item: VocabularyItem,
-    by_word: dict[str, VocabularyItem],
-    compound_lookup: CompoundPartLookup | None,
-) -> str | None:
-    if compound_lookup is None or item.kind != "noun" or len(item.word) < 10:
-        return None
-
-    candidates = [
-        by_word[part.lower()]
-        for part in compound_lookup.compound_parts(_display_head(item.display))
-        if part.lower() in by_word and part.lower() != item.word
-    ]
-    if not candidates:
-        return None
-    candidates.sort(key=lambda candidate: (-candidate.count, candidate.word))
-    return candidates[0].word
-
-
-def _display_head(display: str) -> str:
-    head = display.split(",", 1)[0].strip()
-    for article in ("der ", "die ", "das "):
-        if head.startswith(article):
-            return head[len(article) :]
-    return head
 
 
 def _merge_group(target: str, group: list[VocabularyItem]) -> VocabularyItem:

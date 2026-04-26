@@ -157,25 +157,33 @@ class GermanVocabularyNormalizer:
         return self._normalize_token(token, analyzed)
 
     def normalize_text(self, text: str) -> list[tuple[str, str, str]]:
+        return [
+            normalized
+            for _, normalized in self.normalize_text_with_tokens(text)
+        ]
+
+    def normalize_text_with_tokens(self, text: str) -> list[tuple[str, tuple[str, str, str]]]:
         analyzed_tokens = self.analyzer.analyze_text(text) if self.analyzer else None
         tokens = analyzed_tokens or [
             AnalyzedToken(text=token, lemma="", pos="") for token in _tokens(text)
         ]
-        normalizations: list[tuple[str, str, str]] = []
+        normalizations: list[tuple[str, tuple[str, str, str]]] = []
         for token in tokens:
             normalized = self._normalize_token(token.text, token)
             if normalized is None:
                 continue
-            normalizations.append(normalized)
-            if (
-                normalized[1] == "noun"
-                and normalized[0] == token.text.lower()
-                and len(token.text) >= 10
-            ):
-                normalizations.extend(
-                    self._compound_part_normalizations(token.text, normalized[0])
-                )
+            normalizations.append((token.text, normalized))
         return normalizations
+
+    def compound_part_words(self, token: str, normalized_word: str) -> list[str]:
+        if self.noun_lookup is None or len(token) < 10:
+            return []
+        words: list[str] = []
+        for part in self.noun_lookup.compound_parts(token):
+            normalized = self.normalize(part)
+            if normalized is not None and normalized[0] != normalized_word:
+                words.append(normalized[0])
+        return words
 
     def _normalize_token(
         self, token: str, analyzed: AnalyzedToken | None
@@ -220,18 +228,6 @@ class GermanVocabularyNormalizer:
 
         return self._remember(cache_key, None)
 
-    def _compound_part_normalizations(
-        self, token: str, normalized_word: str
-    ) -> list[tuple[str, str, str]]:
-        if self.noun_lookup is None:
-            return []
-        normalizations: list[tuple[str, str, str]] = []
-        for part in self.noun_lookup.compound_parts(token):
-            normalized = self.normalize(part)
-            if normalized is not None and normalized[0] != normalized_word:
-                normalizations.append(normalized)
-        return normalizations
-
     def _remember(
         self,
         cache_key: tuple[str, str | None, str | None],
@@ -251,6 +247,7 @@ def extract_vocabulary(
         answer.question_id: answer.correct_option_id for answer in answer_keys
     }
     counts: dict[str, VocabularyItem] = {}
+    compound_part_counts: dict[str, int] = {}
 
     for question in questions:
         correct_option_id = correct_options[question.id]
@@ -262,7 +259,7 @@ def extract_vocabulary(
             sources.append((correct_option.text, "answer"))
 
         for text, source in sources:
-            for normalized in normalizer.normalize_text(text):
+            for token, normalized in normalizer.normalize_text_with_tokens(text):
                 word, kind, display = normalized
                 counts[word] = _record_item(
                     existing=counts.get(word),
@@ -273,6 +270,15 @@ def extract_vocabulary(
                     example_source=source,
                     question_id=question.id,
                 )
+                if kind == "noun":
+                    for part_word in normalizer.compound_part_words(token, word):
+                        compound_part_counts[part_word] = (
+                            compound_part_counts.get(part_word, 0) + 1
+                        )
+
+    for word, count in compound_part_counts.items():
+        if word in counts:
+            counts[word] = replace(counts[word], count=counts[word].count + count)
 
     return list(counts.values())
 
