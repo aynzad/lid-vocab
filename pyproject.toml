@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "leben-vocab"
+version = "0.1.0"
+description = "Export Leben in Deutschland vocabulary study CSVs."
+readme = "plans/2026-04-26-leben-vocab-python-project.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+leben-vocab = "leben_vocab.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/leben_vocab"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
