@@ -3,6 +3,7 @@ from pathlib import Path
 import sys
 
 from leben_vocab.export import export_vocabulary
+from leben_vocab.notebook import export_notebook_pack, export_qa_seed
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -15,6 +16,17 @@ def main(argv: list[str] | None = None) -> int:
     export_parser.add_argument("--output", required=True, type=Path)
     export_parser.add_argument("--min-count", default=2, type=int)
 
+    qa_seed_parser = subparsers.add_parser("qa-seed")
+    qa_seed_parser.add_argument("--state", default="Berlin")
+    qa_seed_parser.add_argument("--output", required=True, type=Path)
+    qa_seed_parser.add_argument("--review-md", required=True, type=Path)
+
+    notebook_pack_parser = subparsers.add_parser("notebook-pack")
+    notebook_pack_parser.add_argument("--state", default="Berlin")
+    notebook_pack_parser.add_argument("--answers", required=True, type=Path)
+    notebook_pack_parser.add_argument("--output", required=True, type=Path)
+    notebook_pack_parser.add_argument("--prompt", required=True, type=Path)
+
     args = parser.parse_args(argv)
     if args.command == "export":
         export_vocabulary(
@@ -23,6 +35,21 @@ def main(argv: list[str] | None = None) -> int:
             output_path=_dist_output_path(args.output),
             min_count=args.min_count,
             progress=_print_progress,
+        )
+        return 0
+    if args.command == "qa-seed":
+        export_qa_seed(
+            state=args.state,
+            output_path=_data_output_path(args.output),
+            review_md_path=_dist_output_path(args.review_md),
+        )
+        return 0
+    if args.command == "notebook-pack":
+        export_notebook_pack(
+            state=args.state,
+            answers_path=args.answers,
+            output_path=_dist_output_path(args.output),
+            prompt_path=_dist_output_path(args.prompt),
         )
         return 0
 
@@ -34,6 +61,12 @@ def _dist_output_path(output_path: Path) -> Path:
     if output_path.is_absolute() or output_path.parts[:1] == ("dist",):
         return output_path
     return Path("dist") / output_path
+
+
+def _data_output_path(output_path: Path) -> Path:
+    if output_path.is_absolute() or output_path.parts[:1] in {("data",), ("dist",)}:
+        return output_path
+    return Path("data") / output_path
 
 
 def _target_languages(value: str) -> list[str]:

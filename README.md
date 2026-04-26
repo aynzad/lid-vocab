@@ -114,6 +114,52 @@ When multiple target languages are requested, the `translation` cell contains
 translations in the same order, separated by ` , `, for example
 `to live , زندگی کردن`.
 
+## Build a Compact Knowledge-Base Notebook
+
+The notebook workflow is review-first. The local `lid2026.pdf` is still the
+canonical source for question wording and answer options, but the generated
+notebook pack only trusts a reviewed answer JSON file. This avoids silently
+using an answer source whose numbering or wording no longer matches the PDF.
+
+Seed a reviewed-answer file and a human review checklist:
+
+```sh
+.venv/bin/lid-vocab qa-seed \
+  --state Berlin \
+  --output data/answers-reviewed.json \
+  --review-md dist/berlin_answer_review.md
+```
+
+The JSON records include:
+
+```text
+question_id,state,question,options,seed_correct_option_id,seed_correct_answer_text,match_method,match_confidence,needs_review,review_status
+```
+
+Review `dist/berlin_answer_review.md`, correct any seeded answer in
+`data/answers-reviewed.json`, and set each accepted record to:
+
+```json
+"review_status": "reviewed"
+```
+
+After every selected question is reviewed, create the AI-readable pack and the
+ready-to-use notebook prompt:
+
+```sh
+.venv/bin/lid-vocab notebook-pack \
+  --state Berlin \
+  --answers data/answers-reviewed.json \
+  --output dist/berlin_ai_pack.md \
+  --prompt dist/berlin_notebook_prompt.md
+```
+
+`notebook-pack` fails if any selected question is missing, duplicated,
+unreviewed, or points to an invalid answer option. The generated prompt asks
+the AI to create a Markdown-only, print-ready notebook with compact English
+notes, German answer citations such as `Q152: 1933 bis 1945`, keywords, stable
+note numbers, a global category index, and category-level indexes.
+
 ## Run Tests
 
 ```sh

@@ -135,6 +135,99 @@ def test_main_prints_export_progress_to_stderr(monkeypatch, capsys):
     ]
 
 
+def test_main_delegates_to_qa_seed_with_default_state(monkeypatch):
+    calls = []
+
+    def fake_export_qa_seed(**kwargs):
+        calls.append(kwargs)
+
+    monkeypatch.setattr("leben_vocab.cli.export_qa_seed", fake_export_qa_seed)
+
+    exit_code = main(
+        [
+            "qa-seed",
+            "--output",
+            "answers-reviewed.json",
+            "--review-md",
+            "answer_review.md",
+        ]
+    )
+
+    assert exit_code == 0
+    assert calls == [
+        {
+            "state": "Berlin",
+            "output_path": ANY,
+            "review_md_path": ANY,
+        }
+    ]
+    assert calls[0]["output_path"].as_posix() == "data/answers-reviewed.json"
+    assert calls[0]["review_md_path"].as_posix() == "dist/answer_review.md"
+
+
+def test_main_preserves_explicit_qa_seed_output_roots(monkeypatch):
+    calls = []
+
+    def fake_export_qa_seed(**kwargs):
+        calls.append(kwargs)
+
+    monkeypatch.setattr("leben_vocab.cli.export_qa_seed", fake_export_qa_seed)
+
+    main(
+        [
+            "qa-seed",
+            "--state",
+            "Bayern",
+            "--output",
+            "data/bayern-answers.json",
+            "--review-md",
+            "dist/bayern-review.md",
+        ]
+    )
+
+    assert calls[0]["state"] == "Bayern"
+    assert calls[0]["output_path"].as_posix() == "data/bayern-answers.json"
+    assert calls[0]["review_md_path"].as_posix() == "dist/bayern-review.md"
+
+
+def test_main_delegates_to_notebook_pack(monkeypatch):
+    calls = []
+
+    def fake_export_notebook_pack(**kwargs):
+        calls.append(kwargs)
+
+    monkeypatch.setattr(
+        "leben_vocab.cli.export_notebook_pack", fake_export_notebook_pack
+    )
+
+    exit_code = main(
+        [
+            "notebook-pack",
+            "--state",
+            "Berlin",
+            "--answers",
+            "data/answers-reviewed.json",
+            "--output",
+            "berlin_ai_pack.md",
+            "--prompt",
+            "berlin_notebook_prompt.md",
+        ]
+    )
+
+    assert exit_code == 0
+    assert calls == [
+        {
+            "state": "Berlin",
+            "answers_path": ANY,
+            "output_path": ANY,
+            "prompt_path": ANY,
+        }
+    ]
+    assert calls[0]["answers_path"].as_posix() == "data/answers-reviewed.json"
+    assert calls[0]["output_path"].as_posix() == "dist/berlin_ai_pack.md"
+    assert calls[0]["prompt_path"].as_posix() == "dist/berlin_notebook_prompt.md"
+
+
 def test_fixture_export_writes_berlin_english_csv(tmp_path):
     output_path = tmp_path / "dist" / "words_en.csv"
 
