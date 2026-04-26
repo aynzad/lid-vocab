@@ -1,0 +1,641 @@
+word,display,translation,example,type,example_source,question_id,count,target_language
+bund,"der Bund, Bünde",bundle,"Bund, Länder und Kommunen.",noun,answer,64,88,en
+staat,"der Staat, Staaten",state,Alle Einwohnerinnen/Einwohner und der Staat müssen sich an die Gesetze halten.,noun,answer,3,32,en
+wahl,"die Wahl, Wahlen",Choice,Wahlen in Deutschland sind frei. Was bedeutet das?,noun,question,5,28,en
+bundesland,"das Bundesland, Bundesländer",federal state,Wie viele Bundesländer hat die Bundesrepublik Deutschland?,noun,question,24,22,en
+bürger,"der Bürger, Bürger",citizens,Ungleichbehandlung der Bürgerinnen und Bürger durch den Staat.,noun,answer,17,21,en
+kanzler,"der Kanzler, Kanzler",chancellor,Sie/Er schlägt die Kanzlerin/den Kanzler zur Wahl vor.,noun,answer,70,18,en
+partei,"die Partei, Parteien",party,Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?,noun,question,12,16,en
+regierung,"die Regierung, Regierungen",government,"In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil …",noun,question,1,16,en
+richter,"der Richter, Richter",judge,entscheidet mit Richterinnen/Richtern über Schuld und Strafe.,noun,answer,140,16,en
+bundeskanzler,"der Bundeskanzler, Bundeskanzler",federal chancellor,Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben der deutschen Bundespräsidentin/des deutschen Bundespräsidenten?,noun,question,70,14,en
+arbeit,"die Arbeit, Arbeiten",work,Eine Frau in Deutschland verliert ihre Arbeit. Was darf nicht der Grund für diese Entlassung sein?,noun,question,104,13,en
+bundespräsident,"der Bundespräsident, Bundespräsidenten",federal president,Die Bundespräsidentin/den Bundespräsidenten,noun,answer,44,13,en
+aufgabe,"die Aufgabe, Aufgaben",task,Der deutsche Staat hat viele Aufgaben. Welche Aufgabe gehört dazu?,noun,question,46,12,en
+gesetz,"das Gesetz, Gesetze",law,Alle Einwohnerinnen/Einwohner und der Staat müssen sich an die Gesetze halten.,noun,answer,3,12,en
+arbeitnehmer,"der Arbeitnehmer, Arbeitnehmer",employee,Arbeitgeberinnen/Arbeitgeber und Arbeitnehmerinnen/Arbeitnehmer,noun,answer,99,10,en
+gericht,"das Gericht, Gerichte",court,die Gerichte,noun,answer,63,9,en
+grundgesetz,"das Grundgesetz, Grundgesetze",constitution,Grundgesetz,noun,answer,6,9,en
+freiheit,"die Freiheit, Freiheiten",freedom,Einigkeit und Recht und Freiheit …,noun,answer,40,8,en
+gebiet,"das Gebiet, Gebiete",area,Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?,noun,question,59,8,en
+weltkrieg,"der Weltkrieg, Weltkriege",world war,Ende des Zweiten Weltkriegs in Europa,noun,answer,153,8,en
+abgeordnete,die Abgeordnete,MP,"alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.",noun,answer,13,7,en
+behörde,"die Behörde, Behörden",authority,bei einer Firma oder Behörde beschäftigt.,noun,answer,23,7,en
+eltern,Eltern,parents,"In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am …",noun,question,2,7,en
+gewalt,"die Gewalt, Gewalten",Violence,Was ist keine staatliche Gewalt in Deutschland?,noun,question,32,7,en
+jüdisch,jüdische,Jewish,Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?,word,question,59,7,en
+leben,"das Leben, Leben",live,Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich.,noun,answer,254,7,en
+wirtschaft,"die Wirtschaft, Wirtschaften",economy,"Soziale Marktwirtschaft bedeutet, die Wirtschaft …",noun,question,171,7,en
+arbeitgeber,"der Arbeitgeber, Arbeitgeber",employer,Arbeitgeberinnen/Arbeitgeber und Arbeitnehmerinnen/Arbeitnehmer,noun,answer,99,6,en
+bundestagswahl,"die Bundestagswahl, Bundestagswahlen",federal election,"Je mehr ""Zweitstimmen"" eine Partei bei einer Bundestagswahl bekommt, desto …",noun,question,93,6,en
+grundrecht,"das Grundrecht, Grundrechte",fundamental right,Welches Recht gehört zu den Grundrechten in Deutschland?,noun,question,4,6,en
+bildung,"die Bildung, Bildungen",education,Die Zusammenarbeit von Parteien zur Bildung einer Regierung nennt man in Deutschland …,noun,question,31,5,en
+geld,"das Geld, Gelder",money,"Man darf Geld annehmen, wenn man dafür eine bestimmte Kandidatin/einen bestimmten Kandidaten wählt.",noun,answer,5,5,en
+gemeinde,"die Gemeinde, Gemeinden",community,Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?,noun,question,59,5,en
+mauer,"die Mauer, Mauern",wall,Wer baute die Mauer in Berlin?,noun,question,151,5,en
+meinung,"die Meinung, Meinungen",opinion,weil dadurch die unterschiedlichen Meinungen der Bürgerinnen und Bürger vertreten werden,noun,answer,41,5,en
+nachbarland,"das Nachbarland, Nachbarländer",neighboring country,Welches Land ist ein Nachbarland von Deutschland?,noun,question,222,5,en
+reich,"das Reich, Reiche",rich,"Das ""Dritte Reich"" war eine …",noun,question,158,5,en
+sozialversicherung,"die Sozialversicherung, Sozialversicherungen",social insurance,Womit finanziert der deutsche Staat die Sozialversicherung?,noun,question,35,5,en
+besatzungszone,"die Besatzungszone, Besatzungszonen",occupation zone,In welcher Besatzungszone wurde die DDR gegründet? In der …,noun,question,172,4,en
+bürgermeister,"der Bürgermeister, Bürgermeister",mayor,In Deutschland ist eine Bürgermeisterin/ein Bürgermeister …,noun,question,131,4,en
+einwohner,"der Einwohner, Einwohner",inhabitants,Alle Einwohnerinnen/Einwohner und der Staat müssen sich an die Gesetze halten.,noun,answer,3,4,en
+fernseher,"der Fernseher, Fernseher",television,"Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen?",noun,question,290,4,en
+gastarbeiter,"der Gastarbeiter, Gastarbeiter",guest worker,Gastarbeiterinnen/Gastarbeiter.,noun,answer,299,4,en
+gründen,gründen,found,Wann wurde die Bundesrepublik Deutschland gegründet?,verb,question,169,4,en
+macht,"die Macht, Mächte",makes,Wann waren die Nationalsozialisten mit Adolf Hitler in Deutschland an der Macht?,noun,question,152,4,en
+meinungsfreiheit,"die Meinungsfreiheit, Meinungsfreiheiten",freedom of expression,hier Meinungsfreiheit gilt.,noun,answer,1,4,en
+mitglied,"das Mitglied, Mitglieder",member,Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?,noun,question,118,4,en
+regierungschef,"der Regierungschef, Regierungschefs",head of government,Wie werden die Regierungschefinnen/Regierungschefs der meisten Bundesländer in Deutschland genannt?,noun,question,37,4,en
+staatsgewalt,"die Staatsgewalt, Staatsgewalten",state power,"Was bedeutet ""Volkssouveränität""? Alle Staatsgewalt geht vom ...",noun,question,52,4,en
+strafe,"die Strafe, Strafen",punishment,entscheidet mit Richterinnen/Richtern über Schuld und Strafe.,noun,answer,140,4,en
+verbieten,verbieten,forbid,Was verbietet das deutsche Grundgesetz?,verb,question,15,4,en
+verfassung,"die Verfassung, Verfassungen",constitution,Wie heißt die deutsche Verfassung?,noun,question,6,4,en
+versicherung,"die Versicherung, Versicherungen",insurance,Zu welcher Versicherung gehört die Pflegeversicherung?,noun,question,45,4,en
+vertrag,"der Vertrag, Verträge",contract,"2007 wurde das 50-jährige Jubiläum der ""Römischen Verträge"" gefeiert. Was war der Inhalt der Verträge?",noun,question,237,4,en
+wahlhelfer,"der Wahlhelfer, Wahlhelfer",election assistant,Was ist eine Aufgabe von Wahlhelferinnen/Wahlhelfern in Deutschland?,noun,question,105,4,en
+wappen,"das Wappen, Wappen",coat of arms,Welches ist das Wappen der Bundesrepublik Deutschland?,noun,question,21,4,en
+abitur,"das Abitur, Abiture",baccalaureate,das Abitur,noun,answer,244,3,en
+abschaffen,abschaffen,abolish,Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?,verb,question,12,3,en
+begriff,"der Begriff, Begriffe",expression,"Im Parlament steht der Begriff ""Opposition"" für …",noun,question,13,3,en
+bestrafen,bestrafen,punish,"Wie kann jemand, der den Holocaust leugnet, bestraft werden?",verb,question,96,3,en
+bezeichnen,bezeichnen,designate,"Was wird in Deutschland als ""Ampelkoalition"" bezeichnet? Die Zusammenarbeit …",verb,question,103,3,en
+brauchen,brauchen,need,"Welchen Schulabschluss braucht man normalerweise, um an einer Universität in Deutschland ein Studium zu beginnen?",verb,question,244,3,en
+chefin,"die Chefin, Chefinnen",boss,ungerechtfertigter Kündigung durch Ihre Chefin/Ihren Chef.,noun,answer,136,3,en
+dunkles,das Dunkles,dark,Zwei Freunde wollen in ein öffentliches Schwimmbad in Deutschland. Beide haben eine dunkle Hautfarbe und werden deshalb nicht hineingelassen. Welches Recht wird in dieser Situation verletzt? Das Recht auf …,noun,question,281,3,en
+ei,"das Ei, Eier",ei,Eier bemalen,noun,answer,293,3,en
+erinnern,erinnern,remember,"Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?",verb,question,186,3,en
+fest,"das Fest, Feste",firm,"Was bezahlt man in Deutschland automatisch, wenn man fest angestellt ist?",noun,question,97,3,en
+gelten,gelten,apply,hier Meinungsfreiheit gilt.,verb,answer,1,3,en
+grundsatz,"der Grundsatz, Grundsätze",principle,Welchem Grundsatz unterliegen Wahlen in Deutschland? Wahlen in Deutschland sind …,noun,question,122,3,en
+jugendamt,"das Jugendamt, Jugendämter",youth welfare office,Jugendamt.,noun,answer,255,3,en
+meinen,meinen,mine,Deutschland ist ein Rechtsstaat. Was ist damit gemeint?,verb,question,3,3,en
+mutter,"die Mutter, Mütter",mother,Mutter ist.,noun,answer,277,3,en
+oberhaupt,"das Oberhaupt, Oberhäupter",head,das Oberhaupt einer Gemeinde.,noun,answer,131,3,en
+rechtsstaat,"der Rechtsstaat, Rechtsstaaten",rule of law,Deutschland ist ein Rechtsstaat. Was ist damit gemeint?,noun,question,3,3,en
+schule,"die Schule, Schulen",school,"In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am …",noun,question,2,3,en
+sicherheit,"die Sicherheit, Sicherheiten",safety,Welche Maßnahme schafft in Deutschland soziale Sicherheit?,noun,question,36,3,en
+sprache,"die Sprache, Sprachen",language,Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.,noun,answer,268,3,en
+stadt,"die Stadt, Städte",city,Welche Städte haben die größten jüdischen Gemeinden in Deutschland?,noun,question,66,3,en
+vertreten,vertreten,represent,weil dadurch die unterschiedlichen Meinungen der Bürgerinnen und Bürger vertreten werden,verb,answer,41,3,en
+wahlrecht,"das Wahlrecht, Wahlrechte",right to vote,"Was bedeutet ""aktives Wahlrecht"" in Deutschland?",noun,question,115,3,en
+öffentlich,öffentlichen,public,bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen,word,answer,16,3,en
+abendgymnasium,"das Abendgymnasium, Abendgymnasien",evening high school,einem Abendgymnasium.,noun,answer,257,2,en
+alliierter,der Alliierter,allied,"Welche Länder wurden nach dem Zweiten Weltkrieg in Deutschland als ""Alliierte Besatzungsmächte"" bezeichnet?",noun,question,167,2,en
+amt,"das Amt, Ämter",office,Welches Amt gehört in Deutschland zur Gemeindeverwaltung?,noun,question,56,2,en
+anmelden,anmelden,register,Sie müssen die Demonstration anmelden.,verb,answer,243,2,en
+ansprechpartner,"der Ansprechpartner, Ansprechpartner",contact person,"Was sollten Sie tun, wenn Sie von Ihrer Ansprechpartnerin/Ihrem Ansprechpartner in einer deutschen Behörde schlecht behandelt werden?",noun,question,276,2,en
+anwalt,"der Anwalt, Anwälte",lawyer,die Unterstützung einer Anwältin/eines Anwalts,noun,answer,275,2,en
+anwältin,"die Anwältin, Anwältinnen",lawyer,die Unterstützung einer Anwältin/eines Anwalts,noun,answer,275,2,en
+arbeitsgericht,"das Arbeitsgericht, Arbeitsgerichte",labor court,Sie gehen in Deutschland zum Arbeitsgericht bei …,noun,question,136,2,en
+ausländer,"der Ausländer, Ausländer",foreigners,Welches Grundrecht gilt in Deutschland nur für Ausländerinnen/Ausländer? Das Grundrecht auf …,noun,question,9,2,en
+beachten,beachten,note,"Sie haben in Deutschland absichtlich einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?",verb,question,274,2,en
+behördenleiter,"der Behördenleiter, Behördenleiter",head of authority,Ich kann mich bei der Behördenleiterin/beim Behördenleiter beschweren.,noun,answer,276,2,en
+beitritt,"der Beitritt, Beitritte",join,Mit dem Beitritt der DDR zur Bundesrepublik Deutschland gehören die neuen Bundesländer nun auch …,noun,question,205,2,en
+besatzungsmacht,"die Besatzungsmacht, Besatzungsmächte",occupying power,"Welche Länder wurden nach dem Zweiten Weltkrieg in Deutschland als ""Alliierte Besatzungsmächte"" bezeichnet?",noun,question,167,2,en
+besonderes,das Besonderes,special,"Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem …",noun,question,102,2,en
+bestimmt,bestimmte,determined,"Man darf Geld annehmen, wenn man dafür eine bestimmte Kandidatin/einen bestimmten Kandidaten wählt.",word,answer,5,2,en
+bewirben,bewirben,apply,"Eine Frau, die ein zweijähriges Kind hat, bewirbt sich in Deutschland um eine Stelle. Was ist ein Beispiel für Diskriminierung? Sie bekommt die Stelle nur deshalb nicht, weil sie …",verb,question,277,2,en
+bewohner,"der Bewohner, Bewohner",residents,"Regeln, an die sich alle Bewohnerinnen und Bewohner halten müssen.",noun,answer,279,2,en
+bilden,bilden,form,das Bundeskabinett zu bilden.,verb,answer,65,2,en
+brauch,"der Brauch, Bräuche",need,Was ist in Deutschland ein Brauch zu Weihnachten?,noun,question,271,2,en
+brief,"der Brief, Briefe",letter,"Sie haben in Deutschland absichtlich einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?",noun,question,274,2,en
+bundeskabinett,"das Bundeskabinett, Bundeskabinette",federal cabinet,das Bundeskabinett zu bilden.,noun,answer,65,2,en
+bundesstaat,"der Bundesstaat, Bundesstaaten",federal state,ein Bundesstaat.,noun,answer,27,2,en
+bündnis,"das Bündnis, Bündnisse",alliance,"von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung",noun,answer,103,2,en
+ehepaar,"das Ehepaar, Ehepaare",married couple,"In Deutschland dürfen Ehepaare sich scheiden lassen. Meistens müssen sie dazu das ""Trennungsjahr"" einhalten. Was bedeutet das?",noun,question,254,2,en
+ehrenamtliche,die Ehrenamtliche,honorary,In Deutschland helfen ehrenamtliche Wahlhelferinnen und Wahlhelfer bei den Wahlen. Was ist eine Aufgabe von Wahlhelferinnen/Wahlhelfern?,noun,question,106,2,en
+eigen,eigene,own,eine eigene Regierung,word,answer,39,2,en
+einhalten,einhalten,comply,Der Staat muss die Gesetze einhalten.,verb,answer,53,2,en
+einheit,"die Einheit, Einheiten",unit,Einheit.,noun,answer,194,2,en
+erlauben,erlauben,allow,Was ist bei Bundestags- und Landtagswahlen in Deutschland erlaubt?,verb,question,133,2,en
+errichten,errichten,erect,"Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …",verb,question,20,2,en
+erwachsene,die Erwachsene,adult,Eine erwachsene Frau möchte in Deutschland das Abitur nachholen. Das kann sie an …,noun,question,257,2,en
+erziehung,die Erziehung,education,Die Erziehung der Kinder ist in Deutschland vor allem Aufgabe …,noun,question,248,2,en
+erziehungsproblem,"das Erziehungsproblem, Erziehungsprobleme",educational problem,Bei Erziehungsproblemen können Eltern in Deutschland Hilfe erhalten vom …,noun,question,255,2,en
+farbe,"die Farbe, Farben",color,Welche Farben hat die deutsche Flagge?,noun,question,214,2,en
+feiern,feiern,celebrate,Am 3. Oktober feiert man in Deutschland den Tag der Deutschen …,verb,question,194,2,en
+feiertag,"der Feiertag, Feiertage",holiday,"Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?",noun,question,186,2,en
+fünf,"die Fünf, Fünfen",five,mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe,noun,answer,96,2,en
+geheim,geheim,secret,geheim.,word,answer,112,2,en
+geldstrafe,"die Geldstrafe, Geldstrafen",fine,die Geldstrafe,noun,answer,10,2,en
+geschäft,"das Geschäft, Geschäfte",business,In welchem Jahr zerstörten die Nationalsozialisten Synagogen und jüdische Geschäfte in Deutschland?,noun,question,163,2,en
+gesetzlich,gesetzlichen,legal,Was gehört nicht zur gesetzlichen Sozialversicherung?,word,question,100,2,en
+gewerkschaft,"die Gewerkschaft, Gewerkschaften",trade union,Gewerkschaften sind Interessenverbände der …,noun,question,101,2,en
+gleichbehandlung,"die Gleichbehandlung, Gleichbehandlungen",equal treatment,Was bedeutet in Deutschland der Grundsatz der Gleichbehandlung?,noun,question,262,2,en
+gründung,"die Gründung, Gründungen",foundation,Gründung der Europäischen Wirtschaftsgemeinschaft (EWG),noun,answer,237,2,en
+hauptaufgabe,Hauptaufgabe,main task,Welche Hauptaufgabe hat die deutsche Bundespräsidentin/der deutsche Bundespräsident? Sie/Er …,word,question,84,2,en
+hausordnung,"die Hausordnung, Hausordnungen",house rules,"In den meisten Mietshäusern in Deutschland gibt es eine ""Hausordnung"". Was steht in einer solchen ""Hausordnung""? Sie nennt …",noun,question,279,2,en
+hautfarbe,"die Hautfarbe, Hautfarben",skin color,Zwei Freunde wollen in ein öffentliches Schwimmbad in Deutschland. Beide haben eine dunkle Hautfarbe und werden deshalb nicht hineingelassen. Welches Recht wird in dieser Situation verletzt? Das Recht auf …,noun,question,281,2,en
+jude,"der Jude, Juden",Jew,Er bat Polen und die polnischen Juden um Vergebung.,noun,answer,181,2,en
+jugendliche,die Jugendliche,young people,"In Deutschland sind Jugendliche ab 14 Jahren strafmündig. Das bedeutet: Jugendliche, die 14 Jahre und älter sind und gegen Strafgesetze verstoßen, …",noun,question,263,2,en
+junge,der Junge,young,"Eine junge Frau in Deutschland, 22 Jahre alt, lebt mit ihrem Freund zusammen. Die Eltern der Frau finden das nicht gut, weil ihnen der Freund nicht gefällt. Was können die Eltern tun?",noun,question,267,2,en
+kirche,"die Kirche, Kirchen",church,"Warum muss man in Deutschland bei der Steuererklärung aufschreiben, ob man zu einer Kirche gehört oder nicht? Weil …",noun,question,291,2,en
+krieg,"der Krieg, Kriege",war,Welcher Krieg dauerte von 1939 bis 1945?,noun,question,160,2,en
+kündigung,"die Kündigung, Kündigungen",termination,ungerechtfertigter Kündigung durch Ihre Chefin/Ihren Chef.,noun,answer,136,2,en
+landtagswahl,"die Landtagswahl, Landtagswahlen",state election,Landtagswahl,noun,answer,62,2,en
+leugnen,leugnen,deny,"Wie kann jemand, der den Holocaust leugnet, bestraft werden?",verb,question,96,2,en
+marktwirtschaft,"die Marktwirtschaft, Marktwirtschaften",market economy,soziale Marktwirtschaft.,noun,answer,50,2,en
+mehrheit,"die Mehrheit, Mehrheiten",majority,"schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.",noun,answer,91,2,en
+meistens,meistens,mostly,Wer wird meistens zur Präsidentin/zum Präsidenten des Deutschen Bundestages gewählt?,word,question,57,2,en
+mindestanteil,Mindestanteil,minimum share,Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt …,word,question,121,2,en
+ministerpräsident,"der Ministerpräsident, Ministerpräsidenten",Prime Minister,Ministerpräsidentin/Ministerpräsident,noun,answer,37,2,en
+muttersprache,"die Muttersprache, Muttersprachen",mother tongue,"Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?",noun,question,268,2,en
+nachholen,nachholen,catch up,Eine erwachsene Frau möchte in Deutschland das Abitur nachholen. Das kann sie an …,verb,question,257,2,en
+pressefreiheit,"die Pressefreiheit, Pressefreiheiten",freedom of the press,Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?,noun,question,12,2,en
+regierend,Regierende,governing,Regierende Bürgermeisterin/Regierender Bürgermeister,word,answer,BE-9,2,en
+regierungspartei,"die Regierungspartei, Regierungsparteien",ruling party,"alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.",noun,answer,13,2,en
+rollstuhl,"der Rollstuhl, Rollstühle",wheelchair,"Ein Mann im Rollstuhl hat sich auf eine Stelle als Buchhalter beworben. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil er …",noun,question,278,2,en
+römischen,Römischen,Roman,"2007 wurde das 50-jährige Jubiläum der ""Römischen Verträge"" gefeiert. Was war der Inhalt der Verträge?",word,question,237,2,en
+scheidung,"die Scheidung, Scheidungen",divorce,Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich.,noun,answer,254,2,en
+schulpolitik,"die Schulpolitik, Schulpolitiken",school policy,Wer bestimmt in Deutschland die Schulpolitik?,noun,question,49,2,en
+seine,die Seine,his,weil es nach dem Grundgesetz seine Aufgabe ist,noun,answer,68,2,en
+senatorin,"die Senatorin, Senatorinnen",senator,Welche Senatorin/welchen Senator hat Berlin nicht?,noun,question,BE-10,2,en
+sitz,"der Sitz, Sitze",seat,mehr Sitze erhält die Partei im Parlament.,noun,answer,93,2,en
+spd,die SPD,spd,Was bedeutet die Abkürzung SPD?,noun,question,78,2,en
+sprechen,sprechen,speak,arbeitet an einem Gericht und spricht Urteile.,verb,answer,142,2,en
+staatsbürger,"der Staatsbürger, Staatsbürger",citizen,"Welches Ehrenamt müssen deutsche Staatsbürgerinnen und Staatsbürger übernehmen, wenn sie dazu aufgefordert werden?",noun,question,282,2,en
+staatsoberhaupt,"das Staatsoberhaupt, Staatsoberhäupter",head of state,Wie heißt Deutschlands heutiges Staatsoberhaupt?,noun,question,75,2,en
+stadtstaat,"der Stadtstaat, Stadtstaaten",city state,Welches Bundesland ist ein Stadtstaat?,noun,question,BE-7,2,en
+straße,"die Straße, Straßen",street,Er baut Straßen und Schulen.,noun,answer,46,2,en
+tag,"der Tag, Tage",day,Am 3. Oktober feiert man in Deutschland den Tag der Deutschen …,noun,question,194,2,en
+teilen,teilen,share,In Deutschland wird die Staatsgewalt geteilt. Für welche Staatsgewalt arbeitet eine Richterin/ein Richter? Für die …,verb,question,145,2,en
+tier,"das Tier, Tiere",animal,Welches Tier ist das Wappentier der Bundesrepublik Deutschland?,noun,question,29,2,en
+trennen,trennen,separate,sind Staat und Religionsgemeinschaften voneinander getrennt.,verb,answer,33,2,en
+verantwortlich,verantwortlich,responsible,Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?,word,question,178,2,en
+verheiraten,verheiraten,marry,darf man zur gleichen Zeit nur mit einer Partnerin/einem Partner verheiratet sein.,verb,answer,252,2,en
+verlieren,verlieren,lose,kann die Regierung ihre Mehrheit verlieren.,verb,answer,98,2,en
+verändern,verändern,change,"schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.",verb,answer,91,2,en
+viel,das Viel,much,Alle sollen gleich viel Geld haben.,noun,answer,8,2,en
+volkssouveränität,Volkssouveränität,sovereignty of the people,"Was bedeutet ""Volkssouveränität""? Alle Staatsgewalt geht vom ...",word,question,52,2,en
+wahlberechtigte,die Wahlberechtigte,eligible voters,das wahlberechtigte Volk,noun,answer,28,2,en
+wechsel,"der Wechsel, Wechsel",change,nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.,noun,answer,125,2,en
+weihnachten,"das Weihnachten, Weihnachten",christmas,Was ist in Deutschland ein Brauch zu Weihnachten?,noun,question,271,2,en
+wiedervereinigung,"die Wiedervereinigung, Wiedervereinigungen",reunification,Wie viele Bundesländer kamen bei der Wiedervereinigung 1990 zur Bundesrepublik Deutschland hinzu?,noun,question,218,2,en
+wirtschaftsgemeinschaft,Wirtschaftsgemeinschaft,economic community,Gründung der Europäischen Wirtschaftsgemeinschaft (EWG),word,answer,237,2,en
+wohnort,"der Wohnort, Wohnorte",place of residence,Man darf sich seinen Wohnort selbst aussuchen.,noun,answer,19,2,en
+womit,Womit,with which,Womit finanziert der deutsche Staat die Sozialversicherung?,word,question,35,2,en
+woran,Woran,what,206. Woran erinnern die sogenannten „Stolpersteine“ in Deutschland?,word,question,206,2,en
+wählerstimme,Wählerstimmen,vote,Eine Partei möchte in den Deutschen Bundestag. Sie muss aber einen Mindestanteil an Wählerstimmen haben. Das heißt …,word,question,121,2,en
+während,während,while,Was gab es in Deutschland nicht während der Zeit des Nationalsozialismus?,word,question,159,2,en
+zerstören,zerstören,destroy,In welchem Jahr zerstörten die Nationalsozialisten Synagogen und jüdische Geschäfte in Deutschland?,verb,question,163,2,en
+ziel,"das Ziel, Ziele",goal,"Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …",noun,question,20,2,en
+zusammen,zusammen,together,Durch welche Verträge schloss sich die Bundesrepublik Deutschland mit anderen Staaten zur Europäischen Wirtschaftsgemeinschaft zusammen?,word,question,239,2,en
+zusammenarbeit,die Zusammenarbeit,cooperation,Die Zusammenarbeit von Parteien zur Bildung einer Regierung nennt man in Deutschland …,noun,question,31,2,en
+zuständig,zuständig,responsible,Welches Gericht in Deutschland ist zuständig für die Auslegung des Grundgesetzes?,word,question,80,2,en
+zwang,"der Zwang, Zwänge",forced,"Jede Person kann ohne Zwang entscheiden, ob sie wählen möchte und wen sie wählen möchte.",noun,answer,119,2,en
+zwei,"die Zwei, Zweien",two,Ein Mann ist mit zwei Frauen zur selben Zeit verheiratet.,noun,answer,272,2,en
+zweitstimme,"die Zweitstimme, Zweitstimmen",second voice,"Je mehr ""Zweitstimmen"" eine Partei bei einer Bundestagswahl bekommt, desto …",noun,question,93,2,en
+zählen,zählen,count,Sie zählen die Stimmen nach dem Ende der Wahl.,verb,answer,105,2,en
+öffnen,öffnen,Open,Wann wurde die Mauer in Berlin für alle geöffnet?,verb,question,191,2,en
+abgeben,abgeben,deliver,Man kann durch Briefwahl seine Stimme abgeben.,verb,answer,133,1,en
+abgeordneter,der Abgeordneter,delegate,eine Abgeordnete/ein Abgeordneter der stärksten Fraktion,noun,answer,57,1,en
+abhalten,abhalten,hold,Maik und Sybille wollen mit Freunden an ihrem deutschen Wohnort eine Demonstration auf der Straße abhalten. Was müssen sie vorher tun?,verb,question,243,1,en
+abkommen,"das Abkommen, Abkommen",agree,Deutschland ist Mitglied des Schengener Abkommens. Was bedeutet das?,noun,question,221,1,en
+abschottung,"die Abschottung, Abschottungen",foreclosure,"Wofür stand der Ausdruck ""Eiserner Vorhang""? Für die Abschottung …",noun,question,185,1,en
+absichtlich,absichtlich,on purpose,"Sie haben in Deutschland absichtlich einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?",word,question,274,1,en
+adler,"der Adler, Adler",eagle,Adler,noun,answer,29,1,en
+adressiern,adressiern,address,"Sie haben in Deutschland absichtlich einen Brief geöffnet, der an eine andere Person adressiert ist. Was haben Sie nicht beachtet?",verb,question,274,1,en
+adventszeit,"die Adventszeit, Adventszeiten",advent season,die Adventszeit.,noun,answer,296,1,en
+allgemein,allgemein,General,Wie wird der Beitritt der DDR zur Bundesrepublik Deutschland im Jahr 1990 allgemein genannt?,word,question,228,1,en
+ampelkoalition,"die Ampelkoalition, Ampelkoalitionen",traffic light coalition,"Was wird in Deutschland als ""Ampelkoalition"" bezeichnet? Die Zusammenarbeit …",noun,question,103,1,en
+angebot,"das Angebot, Angebote",offer,"richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich.",noun,answer,171,1,en
+angestellte,die Angestellte,employee,Frau Frost arbeitet als fest angestellte Mitarbeiterin in einem Büro. Was muss sie nicht von ihrem Gehalt bezahlen?,noun,question,285,1,en
+angeworben,angeworben,recruited,"Ausländische Arbeitnehmerinnen und Arbeitnehmer, die in den 50er und 60er Jahren von der Bundesrepublik Deutschland angeworben wurden, nannte man …",verb,question,299,1,en
+angst,"die Angst, Ängste",fear,"Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?",noun,question,268,1,en
+anhänger,"der Anhänger, Anhänger",trailer,Jüdische Geschäfte und Synagogen werden durch Nationalsozialisten und ihre Anhänger zerstört.,noun,answer,164,1,en
+anklagen,anklagen,accuse,eine Straftat begangen hat und angeklagt wird.,verb,answer,139,1,en
+anlage,"die Anlage, Anlagen",plant,"Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? In Anlehnung an Bundeswahlordnung (BWO), Anlage 26",noun,question,130,1,en
+anlehnung,"die Anlehnung, Anlehnungen",leaning,"Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? In Anlehnung an Bundeswahlordnung (BWO), Anlage 26",noun,question,130,1,en
+annehmen,annehmen,Accept,"Man darf Geld annehmen, wenn man dafür eine bestimmte Kandidatin/einen bestimmten Kandidaten wählt.",verb,answer,5,1,en
+anspruch,"der Anspruch, Ansprüche",claim,In Deutschland haben Kinder ab dem Alter von drei Jahren bis zur Ersteinschulung einen Anspruch auf …,noun,question,269,1,en
+anstellen,anstellen,hire,"Was bezahlt man in Deutschland automatisch, wenn man fest angestellt ist?",verb,question,97,1,en
+antrag,"der Antrag, Anträge",application,Sie muss einen Antrag bei der Elterngeldstelle stellen.,noun,answer,241,1,en
+anwesenheitspflicht,die Anwesenheitspflicht,compulsory attendance,Anwesenheitspflicht.,noun,answer,260,1,en
+arbeitsplatz,"der Arbeitsplatz, Arbeitsplätze",workplace,"In Deutschland hat man die besten Chancen auf einen gut bezahlten Arbeitsplatz, wenn man …",noun,question,250,1,en
+arbeitsverhältnis,"das Arbeitsverhältnis, Arbeitsverhältnisse",employment relationship,Sie möchten bei einer Firma in Deutschland ihr Arbeitsverhältnis beenden. Was müssen Sie beachten?,noun,question,287,1,en
+arbeitswelt,"die Arbeitswelt, Arbeitswelten",working world,Welches Gericht ist in Deutschland bei Konflikten in der Arbeitswelt zuständig?,noun,question,137,1,en
+armee,"die Armee, Armeen",army,die deutsche Armee,noun,answer,77,1,en
+artikel,"der Artikel, Artikel",article,Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?,noun,question,18,1,en
+attentat,"das Attentat, Attentate",assassination,das Attentat auf Hitler am 20. Juli 1944.,noun,answer,162,1,en
+auffordern,auffordern,prompt,"Welches Ehrenamt müssen deutsche Staatsbürgerinnen und Staatsbürger übernehmen, wenn sie dazu aufgefordert werden?",verb,question,282,1,en
+auflistung,"die Auflistung, Auflistungen",Listing,"Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?",noun,question,201,1,en
+aufruf,"der Aufruf, Aufrufe",call,der öffentliche Aufruf zur Vernichtung Israels,noun,answer,111,1,en
+aufschreiben,aufschreiben,write down,"Warum muss man in Deutschland bei der Steuererklärung aufschreiben, ob man zu einer Kirche gehört oder nicht? Weil …",verb,question,291,1,en
+aufstand,"der Aufstand, Aufstände",uprising,"Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?",noun,question,186,1,en
+aufteilen,aufteilen,divide,Welche deutsche Stadt wurde nach dem Zweiten Weltkrieg in vier Sektoren aufgeteilt?,verb,question,177,1,en
+ausbilden,ausbilden,train,gut ausgebildet ist.,verb,answer,250,1,en
+ausbildung,"die Ausbildung, Ausbildungen",education,Erwachsene müssen auch nach der Ausbildung immer weiter lernen.,noun,answer,284,1,en
+ausdruck,"der Ausdruck, Ausdrücke",expression,"Wofür stand der Ausdruck ""Eiserner Vorhang""? Für die Abschottung …",noun,question,185,1,en
+ausdrücken,ausdrücken,express,Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?,verb,question,181,1,en
+ausgleich,"der Ausgleich, Ausgleiche",equalization,"richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich.",noun,answer,171,1,en
+auslegung,"die Auslegung, Auslegungen",design,Welches Gericht in Deutschland ist zuständig für die Auslegung des Grundgesetzes?,noun,question,80,1,en
+ausländisch,Ausländische,foreign,"Ausländische Arbeitnehmerinnen und Arbeitnehmer, die in den 50er und 60er Jahren von der Bundesrepublik Deutschland angeworben wurden, nannte man …",word,question,299,1,en
+aussage,"die Aussage, Aussagen",statement,Welche Aussage ist richtig? In Deutschland …,noun,question,33,1,en
+aussuchen,aussuchen,select,Man darf sich seinen Wohnort selbst aussuchen.,verb,answer,19,1,en
+auswahl,"die Auswahl, Auswahlen",selection,Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.,noun,answer,268,1,en
+auswirkung,"die Auswirkung, Auswirkungen",effect,In Deutschland kann ein Regierungswechsel in einem Bundesland Auswirkungen auf die Bundespolitik haben. Das Regieren wird …,noun,question,91,1,en
+außenbeziehung,Außenbeziehungen,external relationship,Senatorin/Senator für Außenbeziehungen,word,answer,BE-10,1,en
+bar,"das Bar, Bars",cash,Seit wann bezahlt man in Deutschland mit dem Euro in bar?,noun,question,240,1,en
+bedingungslos,bedingungslose,unconditional,durch die bedingungslose Kapitulation Deutschlands,word,answer,179,1,en
+beenden,beenden,finish,Sie möchten bei einer Firma in Deutschland ihr Arbeitsverhältnis beenden. Was müssen Sie beachten?,verb,question,287,1,en
+befinden,befinden,condition,"in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",verb,answer,71,1,en
+begehen,begehen,commit,eine Straftat begangen hat und angeklagt wird.,verb,answer,139,1,en
+begründen,begründen,justify,Woraus begründet sich Deutschlands besondere Verantwortung für Israel?,verb,question,288,1,en
+behandeln,behandeln,treat,"Was sollten Sie tun, wenn Sie von Ihrer Ansprechpartnerin/Ihrem Ansprechpartner in einer deutschen Behörde schlecht behandelt werden?",verb,question,276,1,en
+behauptung,"die Behauptung, Behauptungen",claim,bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen,noun,answer,16,1,en
+behinderung,"die Behinderung, Behinderungen",Disability,Niemand darf z.B. wegen einer Behinderung benachteiligt werden.,noun,answer,262,1,en
+beitreten,beitreten,join,Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland beigetreten.,verb,answer,204,1,en
+bekannt,bekannt,known,Claus Schenk Graf von Stauffenberg wurde bekannt durch …,word,question,162,1,en
+bemalen,bemalen,paint,Eier bemalen,verb,answer,293,1,en
+benachteiligen,benachteiligen,disadvantage,Niemand darf z.B. wegen einer Behinderung benachteiligt werden.,verb,answer,262,1,en
+beraten,beraten,advise,Wer berät in Deutschland Personen bei Rechtsfragen und vertritt sie vor Gericht?,verb,question,141,1,en
+berufsinformationszentrum,Berufsinformationszentrum,career information center,Das Berufsinformationszentrum BIZ bei der Bundesagentur für Arbeit in Deutschland hilft bei der …,word,question,259,1,en
+beschließen,beschließen,decide,Wer beschließt in Deutschland ein neues Gesetz?,verb,question,42,1,en
+beschweren,beschweren,complain,Ich kann mich bei der Behördenleiterin/beim Behördenleiter beschweren.,verb,answer,276,1,en
+beschäftigen,beschäftigen,employ,bei einer Firma oder Behörde beschäftigt.,verb,answer,23,1,en
+beschützen,beschützen,protect,Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders beschützt. Wie heißt dieser Schutz?,verb,question,247,1,en
+besonders,besonders,especially,Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders beschützt. Wie heißt dieser Schutz?,word,question,247,1,en
+beste,die Beste,best,"In Deutschland hat man die besten Chancen auf einen gut bezahlten Arbeitsplatz, wenn man …",noun,question,250,1,en
+bestimmen,bestimmen,determine,Wer bestimmt in Deutschland die Schulpolitik?,verb,question,49,1,en
+beteiligen,beteiligen,participate,Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.,verb,answer,134,1,en
+betriebsrat,"der Betriebsrat, Betriebsräte",works council,der Betriebsrat,noun,answer,286,1,en
+bevölkerung,"die Bevölkerung, Bevölkerungen",population,In welchem anderen Land gibt es eine große deutschsprachige Bevölkerung?,noun,question,225,1,en
+bewerben,bewerben,apply,"Ein Mann im Rollstuhl hat sich auf eine Stelle als Buchhalter beworben. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil er …",verb,question,278,1,en
+bezahlt,bezahlten,paid,"In Deutschland hat man die besten Chancen auf einen gut bezahlten Arbeitsplatz, wenn man …",word,question,250,1,en
+bezirk,"der Bezirk, Bezirke",district,Welches ist ein Bezirk von Berlin?,noun,question,BE-2,1,en
+bezirksverordnetenversammlung,Bezirksverordnetenversammlung,district assembly,Ab welchem Alter darf man in Berlin bei Kommunalwahlen (Wahl der Bezirksverordnetenversammlung) wählen?,word,question,BE-4,1,en
+bezug,"der Bezug, Bezüge",reference,Welche Handlungen mit Bezug auf den Staat Israel sind in Deutschland verboten?,noun,question,111,1,en
+bild,"das Bild, Bilder",picture,Was zeigt dieses Bild?,noun,question,55,1,en
+bitten,bitten,ask,Er bat Polen und die polnischen Juden um Vergebung.,verb,answer,181,1,en
+biz,BIZ,biz,Das Berufsinformationszentrum BIZ bei der Bundesagentur für Arbeit in Deutschland hilft bei der …,word,question,259,1,en
+briefgeheimnis,das Briefgeheimnis,secrecy of correspondence,das Briefgeheimnis,noun,answer,274,1,en
+briefwahl,"die Briefwahl, Briefwahlen",postal vote,Man kann durch Briefwahl seine Stimme abgeben.,noun,answer,133,1,en
+buchhalter,"der Buchhalter, Buchhalter",accountant,"Ein Mann im Rollstuhl hat sich auf eine Stelle als Buchhalter beworben. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil er …",noun,question,278,1,en
+bundesadler,Bundesadler,federal eagle,der Bundesadler,word,answer,216,1,en
+bundesagentur,"die Bundesagentur, Bundesagenturen",federal agency,Das Berufsinformationszentrum BIZ bei der Bundesagentur für Arbeit in Deutschland hilft bei der …,noun,question,259,1,en
+bundeskanzleramt,"das Bundeskanzleramt, Bundeskanzlerämter",Federal Chancellery,"in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",noun,answer,71,1,en
+bundespolitik,"die Bundespolitik, Bundespolitiken",federal policy,In Deutschland kann ein Regierungswechsel in einem Bundesland Auswirkungen auf die Bundespolitik haben. Das Regieren wird …,noun,question,91,1,en
+bundesregierung,"die Bundesregierung, Bundesregierungen",federal government,Wer ernennt in Deutschland die Ministerinnen/die Minister der Bundesregierung?,noun,question,58,1,en
+bundestagssitz,Bundestagssitz,federal parliament seat,den Bundestagssitz in Berlin,word,answer,55,1,en
+bundesverdienstkreuz,"das Bundesverdienstkreuz, Bundesverdienstkreuze",federal cross of merit,Bundesverdienstkreuz,noun,answer,102,1,en
+bundesverfassungsgericht,"das Bundesverfassungsgericht, Bundesverfassungsgerichte",federal constitutional court,Bundesverfassungsgericht,noun,answer,80,1,en
+bundesversammlung,"die Bundesversammlung, Bundesversammlungen",federal assembly,die Bundesversammlung,noun,answer,86,1,en
+bundeswahlordnung,Bundeswahlordnung,federal election code,"Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? In Anlehnung an Bundeswahlordnung (BWO), Anlage 26",word,question,130,1,en
+bundeswehr,die Bundeswehr,federal armed forces,Was ist die Bundeswehr?,noun,question,77,1,en
+bunt,bunte,colorful,Zu welchem Fest tragen Menschen in Deutschland bunte Kostüme und Masken?,word,question,264,1,en
+bwo,BWO,bwo,"Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? In Anlehnung an Bundeswahlordnung (BWO), Anlage 26",word,question,130,1,en
+bürgerinitiative,"die Bürgerinitiative, Bürgerinitiativen",citizens' initiative,Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.,noun,answer,134,1,en
+bürgerversammlung,Bürgerversammlung,citizens' assembly,die Bürgerversammlung,word,answer,48,1,en
+büro,"das Büro, Büros",office,Frau Frost arbeitet als fest angestellte Mitarbeiterin in einem Büro. Was muss sie nicht von ihrem Gehalt bezahlen?,noun,question,285,1,en
+christentum,"das Christentum, Christentümer",Christianity,das Christentum,noun,answer,295,1,en
+danach,Danach,afterwards,Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich.,word,answer,254,1,en
+dauern,dauern,last,Welcher Krieg dauerte von 1939 bis 1945?,verb,question,160,1,en
+desto,desto,the,"Je mehr ""Zweitstimmen"" eine Partei bei einer Bundestagswahl bekommt, desto …",word,question,93,1,en
+deutlich,deutlich,clear,Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?,word,question,235,1,en
+deutsch,Deutsch,German,"Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?",noun,question,268,1,en
+deutschsprachig,deutschsprachige,German-speaking,In welchem anderen Land gibt es eine große deutschsprachige Bevölkerung?,word,question,225,1,en
+dort,dort,there,"in Berlin, weil sich dort das Bundeskanzleramt und der Bundestag befinden.",word,answer,71,1,en
+dreistufig,dreistufigen,three-stage,Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?,word,question,69,1,en
+dritte,die Dritte,third,"Das ""Dritte Reich"" war eine …",noun,question,158,1,en
+ehegatte,"der Ehegatte, Ehegatten",spouse,Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich.,noun,answer,254,1,en
+ehemalig,ehemaligen,Former,Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?,word,question,181,1,en
+ehescheidung,"die Ehescheidung, Ehescheidungen",divorce,Was braucht man in Deutschland für eine Ehescheidung?,noun,question,275,1,en
+ehren,ehren,honor,"Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem …",verb,question,102,1,en
+ehrenamt,"das Ehrenamt, Ehrenämter",honorary,"Welches Ehrenamt müssen deutsche Staatsbürgerinnen und Staatsbürger übernehmen, wenn sie dazu aufgefordert werden?",noun,question,282,1,en
+ehrenamtlich,ehrenamtlich,honorary,Viele Menschen in Deutschland arbeiten in ihrer Freizeit ehrenamtlich. Was bedeutet das?,word,question,132,1,en
+ehrenamtlicher,der Ehrenamtlicher,volunteer,eine ehrenamtliche Richterin/ein ehrenamtlicher Richter.,noun,answer,150,1,en
+einhaltung,"die Einhaltung, Einhaltungen",compliance,die Einhaltung von Gesetzen zu überwachen,noun,answer,148,1,en
+einigkeit,die Einigkeit,unity,Einigkeit und Recht und Freiheit …,noun,answer,40,1,en
+einlegen,einlegen,insert,Einspruch einlegen.,verb,answer,280,1,en
+einrichtung,"die Einrichtung, Einrichtungen",furnishing,Die Volkshochschule in Deutschland ist eine Einrichtung …,noun,question,270,1,en
+einschränken,einschränken,restrict,Wann ist die Meinungsfreiheit in Deutschland eingeschränkt?,verb,question,16,1,en
+einspruch,"der Einspruch, Einsprüche",objection,Einspruch einlegen.,noun,answer,280,1,en
+einwohnermeldeamt,"das Einwohnermeldeamt, Einwohnermeldeämter",residents' registration office,beim Einwohnermeldeamt,noun,answer,253,1,en
+einzelner,der Einzelner,individual,bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen,noun,answer,16,1,en
+eisern,Eiserner,iron,"Wofür stand der Ausdruck ""Eiserner Vorhang""? Für die Abschottung …",word,question,185,1,en
+elsass,das Elsass,Alsace,Elsass-Lothringen,noun,answer,25,1,en
+elterngeld,das Elterngeld,parental allowance,"Frau Seger bekommt ein Kind. Was muss sie tun, um Elterngeld zu erhalten?",noun,question,241,1,en
+elterngeldstelle,Elterngeldstelle,parental allowance office,Sie muss einen Antrag bei der Elterngeldstelle stellen.,word,answer,241,1,en
+enden,enden,end,Wie endete der Zweite Weltkrieg in Europa offiziell?,verb,question,179,1,en
+enthalten,enthalten,contain,"Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?",verb,question,201,1,en
+entlassung,"die Entlassung, Entlassungen",dismissal,Eine Frau in Deutschland verliert ihre Arbeit. Was darf nicht der Grund für diese Entlassung sein?,noun,question,104,1,en
+entscheidung,"die Entscheidung, Entscheidungen",decision,Sie müssen die Entscheidung der volljährigen Tochter respektieren.,noun,answer,267,1,en
+erbringen,erbringen,provide,"Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem …",verb,question,102,1,en
+ereignen,ereignen,occur,Was ereignete sich am 17. Juni 1953 in der DDR?,verb,question,210,1,en
+erhaltung,"die Erhaltung, Erhaltungen",conservation,Ich beteilige mich an einer Bürgerinitiative für die Erhaltung der Buslinie oder gründe selber eine Initiative.,noun,answer,134,1,en
+erheben,erheben,raise,Kündigungsschutzklage erheben,verb,answer,138,1,en
+ermöglichen,ermöglichen,enable,nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.,verb,answer,125,1,en
+ernennen,ernennen,appoint,Wer ernennt in Deutschland die Ministerinnen/die Minister der Bundesregierung?,verb,question,58,1,en
+ernennungsurkunde,"die Ernennungsurkunde, Ernennungsurkunden",certificate of appointment,Der deutsche Bundespräsident Gustav Heinemann gibt Helmut Schmidt 1974 die Ernennungsurkunde zum deutschen Bundeskanzler. Was gehört zu den Aufgaben der deutschen Bundespräsidentin/des deutschen Bundespräsidenten?,noun,question,70,1,en
+erschweren,erschweren,complicate,viele kleine Parteien die Regierungsbildung erschweren.,verb,answer,127,1,en
+ersteinschulung,Ersteinschulung,initial training,In Deutschland haben Kinder ab dem Alter von drei Jahren bis zur Ersteinschulung einen Anspruch auf …,word,question,269,1,en
+erstmals,erstmals,for the first time,Vor wie vielen Jahren gab es erstmals eine jüdische Gemeinde auf dem Gebiet des heutigen Deutschlands?,word,question,59,1,en
+erwerbstätige,Erwerbstätigen,employed,In Deutschland sind die meisten Erwerbstätigen …,word,question,23,1,en
+erziehungsberechtigter,der Erziehungsberechtigter,legal guardian,die Eltern/die Erziehungsberechtigten,noun,answer,242,1,en
+eröffnen,eröffnen,open,Ein Ehepaar möchte in Deutschland ein Restaurant eröffnen. Was braucht es dazu unbedingt?,verb,question,256,1,en
+etwa,etwa,about,vor etwa 1700 Jahren,word,answer,59,1,en
+europawahl,"die Europawahl, Europawahlen",european election,Wer wird bei der Europawahl gewählt?,noun,question,232,1,en
+ewg,EWG,ewg,Gründung der Europäischen Wirtschaftsgemeinschaft (EWG),word,answer,237,1,en
+fahren,fahren,drive,"Man will die Buslinie abschaffen, mit der Sie immer zur Arbeit fahren. Was können Sie machen, um die Buslinie zu erhalten?",verb,question,134,1,en
+finanzieren,finanzieren,finance,Womit finanziert der deutsche Staat die Sozialversicherung?,verb,question,35,1,en
+finden,finden,Find,"Eine junge Frau in Deutschland, 22 Jahre alt, lebt mit ihrem Freund zusammen. Die Eltern der Frau finden das nicht gut, weil ihnen der Freund nicht gefällt. Was können die Eltern tun?",verb,question,267,1,en
+folgend,folgenden,following,"Welche der folgenden Auflistungen enthält nur Bundesländer, die zum Gebiet der früheren DDR gehörten?",word,question,201,1,en
+freiheitsstrafe,"die Freiheitsstrafe, Freiheitsstrafen",prison sentence,mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe,noun,answer,96,1,en
+freiwillig,freiwillig,voluntary,Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.,word,answer,132,1,en
+freizeit,"die Freizeit, Freizeiten",leisure time,Viele Menschen in Deutschland arbeiten in ihrer Freizeit ehrenamtlich. Was bedeutet das?,noun,question,132,1,en
+freizügigkeit,die Freizügigkeit,freedom of movement,"Was versteht man unter dem Recht der ""Freizügigkeit"" in Deutschland?",noun,question,19,1,en
+frieden,"der Frieden, Frieden",peace,Frieden und Sicherheit in den Ländern der EU,noun,answer,235,1,en
+funktionieren,funktionieren,function,"Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen?",verb,question,290,1,en
+führen,führen,lead,Die Ehegatten führen mindestens ein Jahr getrennt ihr eigenes Leben. Danach ist die Scheidung möglich.,verb,answer,254,1,en
+führerschein,"der Führerschein, Führerscheine",driver's license,"Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?",noun,question,268,1,en
+ganz,ganz,quite,Wie heißt das Parlament für ganz Deutschland?,word,question,74,1,en
+gaststättenerlaubnis,Gaststättenerlaubnis,restaurant license,eine Gaststättenerlaubnis von der zuständigen Behörde,word,answer,256,1,en
+gebetshaus,"das Gebetshaus, Gebetshäuser",house of prayer,Wie heißt das jüdische Gebetshaus?,noun,question,182,1,en
+geburt,"die Geburt, Geburten",birth,Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders beschützt. Wie heißt dieser Schutz?,noun,question,247,1,en
+gedenken,gedenken,commemorate,Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?,verb,question,235,1,en
+gedenktag,"der Gedenktag, Gedenktage",memorial day,Der 27. Januar ist in Deutschland ein offizieller Gedenktag. Woran erinnert dieser Tag?,noun,question,220,1,en
+gefällen,gefällen,fall,"Eine junge Frau in Deutschland, 22 Jahre alt, lebt mit ihrem Freund zusammen. Die Eltern der Frau finden das nicht gut, weil ihnen der Freund nicht gefällt. Was können die Eltern tun?",verb,question,267,1,en
+gegliedert,gegliedert,structured,Die Bundesrepublik Deutschland ist heute gegliedert in …,word,question,64,1,en
+gehalt,"der Gehalt, Gehalte",content,Frau Frost arbeitet als fest angestellte Mitarbeiterin in einem Büro. Was muss sie nicht von ihrem Gehalt bezahlen?,noun,question,285,1,en
+geheimdienst,"der Geheimdienst, Geheimdienste",secret service,der Geheimdienst der DDR,noun,answer,208,1,en
+geistig,geistigem,spiritual,"Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem …",word,question,102,1,en
+gemeindeverwaltung,Gemeindeverwaltung,municipal administration,Welches Amt gehört in Deutschland zur Gemeindeverwaltung?,word,question,56,1,en
+gemeinsam,gemeinsam,together,Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?,word,question,235,1,en
+gerichtsschöffe,Gerichtsschöffe,lay judge,Eine Gerichtsschöffin/ein Gerichtsschöffe in Deutschland ist …,word,question,150,1,en
+gerichtsschöffin,Gerichtsschöffin,lay judge,Eine Gerichtsschöffin/ein Gerichtsschöffe in Deutschland ist …,word,question,150,1,en
+gesamt,gesamten,total,Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.,word,answer,178,1,en
+gesetzgebung,"die Gesetzgebung, Gesetzgebungen",Legislation,Die deutschen Bundesländer wirken an der Gesetzgebung des Bundes mit durch …,noun,question,90,1,en
+gewinnen,gewinnen,Win,"Wahlen in Deutschland gewinnt die Partei, die …",verb,question,113,1,en
+gewissensfreiheit,Gewissensfreiheit,freedom of conscience,Glaubens- und Gewissensfreiheit,word,answer,7,1,en
+glauben,glauben,believe,"Jeder kann glauben, was er möchte.",verb,answer,292,1,en
+graf,"der Graf, Grafen",graph,Claus Schenk Graf von Stauffenberg wurde bekannt durch …,noun,question,162,1,en
+grenze,"die Grenze, Grenzen",border,Die Bundesrepublik Deutschland hat die Grenzen von heute seit …,noun,question,219,1,en
+grundlage,"die Grundlage, Grundlagen",basis,184. Auf welcher rechtlichen Grundlage wurde der Staat Israel gegründet?,noun,question,184,1,en
+gründungsmitglied,"das Gründungsmitglied, Gründungsmitglieder",founding member,Die Bundesrepublik Deutschland ist ein Gründungsmitglied …,noun,question,173,1,en
+grüne,das Grüne,green,"von SPD, FDP und Bündnis 90/Die Grünen in einer Regierung",noun,answer,103,1,en
+gültig,gültig,valid,"Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? In Anlehnung an Bundeswahlordnung (BWO), Anlage 26",word,question,130,1,en
+handlung,"die Handlung, Handlungen",action,Welche Handlungen mit Bezug auf den Staat Israel sind in Deutschland verboten?,noun,question,111,1,en
+hauptsächlich,hauptsächlich,mainly,Wer ist in Deutschland hauptsächlich verantwortlich für die Kindererziehung?,word,question,249,1,en
+haus,"das Haus, Häuser",house,"Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen?",noun,question,290,1,en
+haut,"die Haut, Häute",skin,er eine dunkle Haut hat.,noun,answer,289,1,en
+heiraten,heiraten,marry,"Wohin muss man in Deutschland zuerst gehen, wenn man heiraten möchte?",verb,question,265,1,en
+herbst,"der Herbst, Herbste",fall,"Warum nennt man die Zeit im Herbst 1989 in der DDR ""Die Wende""? In dieser Zeit veränderte sich die DDR politisch …",noun,question,196,1,en
+hilfe,"die Hilfe, Hilfen",help,Bei Erziehungsproblemen können Eltern in Deutschland Hilfe erhalten vom …,noun,question,255,1,en
+hineingelassen,hineingelassen,let in,Zwei Freunde wollen in ein öffentliches Schwimmbad in Deutschland. Beide haben eine dunkle Hautfarbe und werden deshalb nicht hineingelassen. Welches Recht wird in dieser Situation verletzt? Das Recht auf …,verb,question,281,1,en
+hinzu,hinzu,added,Wie viele Bundesländer kamen bei der Wiedervereinigung 1990 zur Bundesrepublik Deutschland hinzu?,word,question,218,1,en
+hungern,hungern,starve,"Es kann ein Kind, das geschlagen wird oder hungern muss, aus der Familie nehmen.",verb,answer,258,1,en
+hürde,"die Hürde, Hürden",hurdle,5%-Hürde.,noun,answer,121,1,en
+ihnen,ihnen,them,"Eine junge Frau in Deutschland, 22 Jahre alt, lebt mit ihrem Freund zusammen. Die Eltern der Frau finden das nicht gut, weil ihnen der Freund nicht gefällt. Was können die Eltern tun?",word,question,267,1,en
+informieren,informieren,inform,Wo können Sie sich in Berlin über politische Themen informieren?,verb,question,BE-6,1,en
+inhalt,"der Inhalt, Inhalte",content,"2007 wurde das 50-jährige Jubiläum der ""Römischen Verträge"" gefeiert. Was war der Inhalt der Verträge?",noun,question,237,1,en
+interessenverband,Interessenverbände,interest group,Gewerkschaften sind Interessenverbände der …,word,question,101,1,en
+jubiläum,"das Jubiläum, Jubiläen",anniversary,"2007 wurde das 50-jährige Jubiläum der ""Römischen Verträge"" gefeiert. Was war der Inhalt der Verträge?",noun,question,237,1,en
+kalt,Kalten,cold,"Zu wem gehörte die DDR im ""Kalten Krieg""?",word,question,202,1,en
+kaputt,kaputt,broken,"Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen?",word,question,290,1,en
+kaufen,kaufen,Buy,"Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen?",verb,question,290,1,en
+kellner,"der Kellner, Kellner",waiter,"Ein Mann mit dunkler Hautfarbe bewirbt sich um eine Stelle als Kellner in einem Restaurant in Deutschland. Was ist ein Beispiel für Diskriminierung? Er bekommt die Stelle nur deshalb nicht, weil …",noun,question,289,1,en
+kennzeichnen,kennzeichnen,characterize,Was kennzeichnete den NS-Staat? Eine Politik …,verb,question,161,1,en
+kindererziehung,die Kindererziehung,child education,Wer ist in Deutschland hauptsächlich verantwortlich für die Kindererziehung?,noun,question,249,1,en
+kindergartenplatz,"der Kindergartenplatz, Kindergartenplätze",kindergarten place,einen Kindergartenplatz.,noun,answer,269,1,en
+kirchensteuer,"die Kirchensteuer, Kirchensteuern",church tax,"es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.",noun,answer,291,1,en
+kniefall,"der Kniefall, Kniefälle",genuflection,Was wollte Willy Brandt mit seinem Kniefall 1970 im ehemaligen jüdischen Ghetto in Warschau ausdrücken?,noun,question,181,1,en
+knüpfen,knüpfen,knot,"es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.",verb,answer,291,1,en
+kommunalwahl,"die Kommunalwahl, Kommunalwahlen",local election,Ab welchem Alter darf man in Berlin bei Kommunalwahlen (Wahl der Bezirksverordnetenversammlung) wählen?,noun,question,BE-4,1,en
+krankenversicherung,"die Krankenversicherung, Krankenversicherungen",health insurance,die Krankenversicherung,noun,answer,36,1,en
+kulturell,kulturellem,cultural,"Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem …",word,question,102,1,en
+kurz,kurz,short,Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders beschützt. Wie heißt dieser Schutz?,word,question,247,1,en
+kämpfen,kämpfen,battle,wenn sie gegen die Verfassung kämpft,verb,answer,43,1,en
+kündigen,kündigen,cancel,"Was kann ich in Deutschland machen, wenn mir meine Arbeitgeberin/mein Arbeitgeber zu Unrecht gekündigt hat?",verb,question,138,1,en
+kündigungsfrist,"die Kündigungsfrist, Kündigungsfristen",notice period,die Kündigungsfrist,noun,answer,287,1,en
+kündigungsschutzklage,"die Kündigungsschutzklage, Kündigungsschutzklagen",action for unfair dismissal,Kündigungsschutzklage erheben,noun,answer,138,1,en
+landesflagge,Landesflagge,national flag,Welche Farben hat die Landesflagge von Berlin?,word,question,BE-5,1,en
+landesparlament,Landesparlament,state parliament,Für wie viele Jahre wird das Landesparlament in Berlin gewählt?,word,question,BE-3,1,en
+landesweit,landesweite,nationwide,landesweite Streiks und ein Volksaufstand,word,answer,210,1,en
+landeszentrale,Landeszentrale,national center,bei der Landeszentrale für politische Bildung,word,answer,BE-6,1,en
+landweg,"der Landweg, Landwege",country lane,Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.,noun,answer,178,1,en
+lange,Lange,long,"Im Jahr 1953 gab es in der DDR einen Aufstand, an den lange Zeit in der Bundesrepublik Deutschland ein Feiertag erinnerte. Wann war das?",noun,question,186,1,en
+lassen,lassen,leave,"In Deutschland dürfen Ehepaare sich scheiden lassen. Meistens müssen sie dazu das ""Trennungsjahr"" einhalten. Was bedeutet das?",verb,question,254,1,en
+lebensform,"die Lebensform, Lebensformen",life form,Welche Lebensform ist in Deutschland nicht erlaubt?,noun,question,272,1,en
+lebensjahr,"das Lebensjahr, Lebensjahre",year of life,"In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am …",noun,question,2,1,en
+lebensversicherung,"die Lebensversicherung, Lebensversicherungen",life insurance,die Lebensversicherung,noun,answer,100,1,en
+legen,legen,lay,Ich lege Widerspruch bei der Behörde ein.,verb,answer,283,1,en
+lehrstellensuche,Lehrstellensuche,apprenticeship search,Lehrstellensuche.,word,answer,259,1,en
+leistung,"die Leistung, Leistungen",performance,"Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem …",noun,question,102,1,en
+leiten,leiten,guide,Wer leitet das deutsche Bundeskabinett?,verb,question,82,1,en
+lernen,lernen,Learn,Erwachsene müssen auch nach der Ausbildung immer weiter lernen.,verb,answer,284,1,en
+letzte,die Letzte,last,In Deutschland nennt man die letzten vier Wochen vor Weihnachten …,noun,question,296,1,en
+lohnsteuer,"die Lohnsteuer, Lohnsteuern",wage tax,"es eine Kirchensteuer gibt, die an die Einkommen- und Lohnsteuer geknüpft ist.",noun,answer,291,1,en
+luftbrücke,"die Luftbrücke, Luftbrücken",air bridge,Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?,noun,question,178,1,en
+maske,"die Maske, Masken",mask,Zu welchem Fest tragen Menschen in Deutschland bunte Kostüme und Masken?,noun,question,264,1,en
+maßnahme,"die Maßnahme, Maßnahmen",measure,Welche Maßnahme schafft in Deutschland soziale Sicherheit?,noun,question,36,1,en
+menschenwürde,die Menschenwürde,human dignity,die Unantastbarkeit der Menschenwürde,noun,answer,18,1,en
+merkmal,"das Merkmal, Merkmale",characteristic,Was ist kein Merkmal unserer Demokratie?,noun,question,30,1,en
+mietshaus,"das Mietshaus, Mietshäuser",tenement,"In den meisten Mietshäusern in Deutschland gibt es eine ""Hausordnung"". Was steht in einer solchen ""Hausordnung""? Sie nennt …",noun,question,279,1,en
+militärbündnis,"das Militärbündnis, Militärbündnisse",military alliance,In welchem Militärbündnis war die DDR Mitglied?,noun,question,207,1,en
+mir,"der Mir, Mirs",me,"Was kann ich in Deutschland machen, wenn mir meine Arbeitgeberin/mein Arbeitgeber zu Unrecht gekündigt hat?",noun,question,138,1,en
+mitarbeiterin,"die Mitarbeiterin, Mitarbeiterinnen",employee,Frau Frost arbeitet als fest angestellte Mitarbeiterin in einem Büro. Was muss sie nicht von ihrem Gehalt bezahlen?,noun,question,285,1,en
+mitgliedstaat,"der Mitgliedstaat, Mitgliedstaaten",member state,Wie viele Mitgliedstaaten hat die EU heute?,noun,question,236,1,en
+mutterschutz,Mutterschutz,maternity protection,Mutterschutz,word,answer,247,1,en
+nachfrage,"die Nachfrage, Nachfragen",demand,"richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich.",noun,answer,171,1,en
+nachtruhe,die Nachtruhe,night's rest,Wann beginnt die gesetzliche Nachtruhe in Deutschland?,noun,question,266,1,en
+nehmen,nehmen,take,"Es kann ein Kind, das geschlagen wird oder hungern muss, aus der Familie nehmen.",verb,answer,258,1,en
+nein,das Nein,no,"Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.",noun,answer,12,1,en
+neue,die Neue,new,Mit dem Beitritt der DDR zur Bundesrepublik Deutschland gehören die neuen Bundesländer nun auch …,noun,question,205,1,en
+neues,das Neues,new,Wer beschließt in Deutschland ein neues Gesetz?,noun,question,42,1,en
+niemand,der Niemand,nobody,Niemand darf z.B. wegen einer Behinderung benachteiligt werden.,noun,answer,262,1,en
+nun,nun,now,Mit dem Beitritt der DDR zur Bundesrepublik Deutschland gehören die neuen Bundesländer nun auch …,word,question,205,1,en
+nämlich,nämlich,namely,"Das Europäische Parlament wird regelmäßig gewählt, nämlich alle …",word,question,230,1,en
+offen,offen,open,"In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil …",word,question,1,1,en
+oft,oft,often,Wie oft gibt es normalerweise Bundestagswahlen in Deutschland?,word,question,109,1,en
+opfer,"das Opfer, Opfer",victim,an die Opfer des Nationalsozialismus,noun,answer,206,1,en
+ordnungsamt,"das Ordnungsamt, Ordnungsämter",regulatory office,Ordnungsamt,noun,answer,56,1,en
+ort,der Ort,place,An welchen Orten arbeitet das Europäische Parlament?,noun,question,238,1,en
+ostern,"das Ostern, Ostern",easter,Was ist in Deutschland ein Brauch zu Ostern?,noun,question,293,1,en
+ostvertrag,Ostverträge,eastern treaty,"Welcher Politiker steht für die ""Ostverträge""?",word,question,211,1,en
+paar,"das Paar, Paare",pair,Wer darf in Deutschland nicht als Paar zusammenleben?,noun,question,245,1,en
+packen,packen,pack,"Sie haben in Deutschland einen Fernseher gekauft. Zu Hause packen Sie den Fernseher aus, doch er funktioniert nicht. Der Fernseher ist kaputt. Was können Sie machen?",verb,question,290,1,en
+parlamentsmitglied,"das Parlamentsmitglied, Parlamentsmitglieder",member of parliament,"Parlamentsmitglieder, die von den Bürgerinnen und Bürgern gewählt werden, nennt man …",noun,question,128,1,en
+passiern,passiern,pass,Was passierte am 9. November 1938 in Deutschland?,verb,question,164,1,en
+passkontrolle,"die Passkontrolle, Passkontrollen",passport control,Deutsche können in viele Länder Europas ohne Passkontrolle reisen.,noun,answer,221,1,en
+pfingsten,"das Pfingsten, Pfingsten",Pentecost,Pfingsten ist ein …,noun,question,294,1,en
+pflegeversicherung,"die Pflegeversicherung, Pflegeversicherungen",long-term care insurance,Zu welcher Versicherung gehört die Pflegeversicherung?,noun,question,45,1,en
+planwirtschaft,"die Planwirtschaft, Planwirtschaften",planned economy,Planwirtschaft,noun,answer,203,1,en
+plenarsaal,"der Plenarsaal, Plenarsäle",plenary hall,Welches Symbol ist im Plenarsaal des Deutschen Bundestages zu sehen?,noun,question,216,1,en
+politiker,"der Politiker, Politiker",politician,"Welcher Politiker steht für die ""Ostverträge""?",noun,question,211,1,en
+pressezensur,Pressezensur,press censorship,Pressezensur,word,answer,30,1,en
+prozent,"das Prozent, Prozente",percent,"Wie viel Prozent der Zweitstimmen müssen Parteien mindestens bekommen, um in den Deutschen Bundestag gewählt zu werden?",noun,question,117,1,en
+prägen,prägen,shape,Welche Religion hat die europäische und deutsche Kultur geprägt?,verb,question,295,1,en
+prüfung,"die Prüfung, Prüfungen",audit,"Eine junge Frau will den Führerschein machen. Sie hat Angst vor der Prüfung, weil ihre Muttersprache nicht Deutsch ist. Was ist richtig?",noun,question,268,1,en
+rassismus,"der Rassismus, Rassismen",racism,des staatlichen Rassismus,noun,answer,161,1,en
+rechnung,"die Rechnung, Rechnungen",invoice,"Was tun Sie, wenn Sie eine falsche Rechnung von einer deutschen Behörde bekommen?",noun,question,283,1,en
+rechtlich,rechtlichen,legal,184. Auf welcher rechtlichen Grundlage wurde der Staat Israel gegründet?,word,question,184,1,en
+rechtsanwalt,"der Rechtsanwalt, Rechtsanwälte",attorney at law,eine Rechtsanwältin/ein Rechtsanwalt,noun,answer,141,1,en
+rechtsanwältin,"die Rechtsanwältin, Rechtsanwältinnen",attorney at law,eine Rechtsanwältin/ein Rechtsanwalt,noun,answer,141,1,en
+rechtsfrage,"die Rechtsfrage, Rechtsfragen",legal question,Wer berät in Deutschland Personen bei Rechtsfragen und vertritt sie vor Gericht?,noun,question,141,1,en
+rechtsprechend,rechtsprechenden,legally speaking,rechtsprechenden Gewalt.,word,answer,144,1,en
+regel,"die Regel, Regeln",regulates,"Regeln, an die sich alle Bewohnerinnen und Bewohner halten müssen.",noun,answer,279,1,en
+regieren,Regieren,govern,In Deutschland kann ein Regierungswechsel in einem Bundesland Auswirkungen auf die Bundespolitik haben. Das Regieren wird …,word,question,91,1,en
+regierungsbildung,"die Regierungsbildung, Regierungsbildungen",government formation,viele kleine Parteien die Regierungsbildung erschweren.,noun,answer,127,1,en
+regierungsvertreter,"der Regierungsvertreter, Regierungsvertreter",government representative,die Regierungsvertreter der Bundesländer,noun,answer,85,1,en
+regierungswechsel,"der Regierungswechsel, Regierungswechsel",change of government,In Deutschland kann ein Regierungswechsel in einem Bundesland Auswirkungen auf die Bundespolitik haben. Das Regieren wird …,noun,question,91,1,en
+reichskanzler,"der Reichskanzler, Reichskanzler",imperial chancellor,In welchem Jahr wurde Hitler Reichskanzler?,noun,question,156,1,en
+reisen,reisen,travel,Deutsche können in viele Länder Europas ohne Passkontrolle reisen.,verb,answer,221,1,en
+reklamieren,reklamieren,complain,den Fernseher reklamieren,verb,answer,290,1,en
+religionsgemeinschaft,"die Religionsgemeinschaft, Religionsgemeinschaften",religious community,sind Staat und Religionsgemeinschaften voneinander getrennt.,noun,answer,33,1,en
+religionsunterricht,der Religionsunterricht,religious education,Religionsunterricht teilnimmt.,noun,answer,2,1,en
+repräsentieren,repräsentieren,represent,repräsentiert das Land.,verb,answer,84,1,en
+respektieren,respektieren,respect,Sie müssen die Entscheidung der volljährigen Tochter respektieren.,verb,answer,267,1,en
+richten,richten,direct,"richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich.",verb,answer,171,1,en
+rufen,rufen,call,"Bei welchen Demonstrationen in Deutschland riefen die Menschen ""Wir sind das Volk""?",verb,question,166,1,en
+rund,"das Rund, Runde",round,Wer darf bei den rund 40 jüdischen Makkabi-Sportvereinen Mitglied werden?,noun,question,118,1,en
+sachse,"der Sachse, Sachsen",axis,"Mecklenburg-Vorpommern, Brandenburg, Sachsen, Sachsen-Anhalt, Thüringen",noun,answer,201,1,en
+schaffen,schaffen,create,Welche Maßnahme schafft in Deutschland soziale Sicherheit?,verb,question,36,1,en
+scheiden,scheiden,divorce,"In Deutschland dürfen Ehepaare sich scheiden lassen. Meistens müssen sie dazu das ""Trennungsjahr"" einhalten. Was bedeutet das?",verb,question,254,1,en
+schenk,"der Schenk, Schenken",gift,Claus Schenk Graf von Stauffenberg wurde bekannt durch …,noun,question,162,1,en
+schlecht,schlecht,bad,"Was sollten Sie tun, wenn Sie von Ihrer Ansprechpartnerin/Ihrem Ansprechpartner in einer deutschen Behörde schlecht behandelt werden?",word,question,276,1,en
+schloss,schloss,lock,Durch welche Verträge schloss sich die Bundesrepublik Deutschland mit anderen Staaten zur Europäischen Wirtschaftsgemeinschaft zusammen?,verb,question,239,1,en
+schmücken,schmücken,decorate,einen Tannenbaum schmücken,verb,answer,271,1,en
+schnell,schnell,fast,"Was man für die Arbeit können muss, ändert sich in Zukunft sehr schnell. Was kann man tun?",word,question,284,1,en
+schulabschluss,"der Schulabschluss, Schulabschlüsse",school-leaving certificate,"Welchen Schulabschluss braucht man normalerweise, um an einer Universität in Deutschland ein Studium zu beginnen?",noun,question,244,1,en
+schuld,"die Schuld, Schulden",Guilt,entscheidet mit Richterinnen/Richtern über Schuld und Strafe.,noun,answer,140,1,en
+schulpflicht,"die Schulpflicht, Schulpflichten",Compulsory schooling,Schulpflicht,noun,answer,95,1,en
+schulwesen,das Schulwesen,school system,Warum kontrolliert der Staat in Deutschland das Schulwesen?,noun,question,68,1,en
+schutz,"der Schutz, Schutze",protection,Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders beschützt. Wie heißt dieser Schutz?,noun,question,247,1,en
+schwanger,schwanger,Pregnant,Eine Frau ist schwanger. Sie ist kurz vor und nach der Geburt ihres Kindes vom Gesetz besonders beschützt. Wie heißt dieser Schutz?,word,question,247,1,en
+schwarz,das Schwarz,black,schwarz-rot-gold,noun,answer,214,1,en
+schwierig,schwieriger,difficult,"schwieriger, wenn dadurch die Mehrheit im Bundesrat verändert wird.",word,answer,91,1,en
+schwimmbad,"das Schwimmbad, Schwimmbäder",swimming pool,Zwei Freunde wollen in ein öffentliches Schwimmbad in Deutschland. Beide haben eine dunkle Hautfarbe und werden deshalb nicht hineingelassen. Welches Recht wird in dieser Situation verletzt? Das Recht auf …,noun,question,281,1,en
+schöffe,"der Schöffe, Schöffen",juror,Was macht eine Schöffin/ein Schöffe in Deutschland? Sie/Er …,noun,question,140,1,en
+schöffin,"die Schöffin, Schöffinnen",alderwoman,Was macht eine Schöffin/ein Schöffe in Deutschland? Sie/Er …,noun,question,140,1,en
+sehen,sehen,See,Welches Symbol ist im Plenarsaal des Deutschen Bundestages zu sehen?,verb,question,216,1,en
+sehr,sehr,very,"Was man für die Arbeit können muss, ändert sich in Zukunft sehr schnell. Was kann man tun?",word,question,284,1,en
+selbst,das Selbst,itself,Man darf sich seinen Wohnort selbst aussuchen.,noun,answer,19,1,en
+sitzen,sitzen,sit,im Rollstuhl sitzt.,verb,answer,278,1,en
+sogenannter,sogenannten,so-called,206. Woran erinnern die sogenannten „Stolpersteine“ in Deutschland?,word,question,206,1,en
+solcher,solchen,such,"In den meisten Mietshäusern in Deutschland gibt es eine ""Hausordnung"". Was steht in einer solchen ""Hausordnung""? Sie nennt …",word,question,279,1,en
+sorgen,sorgen,provide,"richtet sich nach Angebot und Nachfrage, aber der Staat sorgt für einen sozialen Ausgleich.",verb,answer,171,1,en
+sowjetisch,sowjetischen,Soviet,sowjetischen Besatzungszone,word,answer,172,1,en
+sozialabgabe,Sozialabgaben,social security contribution,Sozialabgaben,word,answer,35,1,en
+staatsangehörige,die Staatsangehörige,nationals,Er bezahlt für alle Staatsangehörigen Urlaubsreisen.,noun,answer,47,1,en
+staatsform,"die Staatsform, Staatsformen",form of government,Was für eine Staatsform hat Deutschland?,noun,question,22,1,en
+staatspräsident,"der Staatspräsident, Staatspräsidenten",president,Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?,noun,question,235,1,en
+staatssicherheit,"die Staatssicherheit, Staatssicherheiten",state security,das Ministerium für Staatssicherheit.,noun,answer,199,1,en
+standesamt,"das Standesamt, Standesämter",registry office,zum Standesamt,noun,answer,265,1,en
+stark,stärksten,strong,eine Abgeordnete/ein Abgeordneter der stärksten Fraktion,word,answer,57,1,en
+stellen,stellen,place,Sie muss einen Antrag bei der Elterngeldstelle stellen.,verb,answer,241,1,en
+steuerbescheid,"der Steuerbescheid, Steuerbescheide",tax assessment,"Wenn Sie sich in Deutschland gegen einen falschen Steuerbescheid wehren wollen, müssen Sie …",noun,question,280,1,en
+steuererklärung,"die Steuererklärung, Steuererklärungen",tax return,"Warum muss man in Deutschland bei der Steuererklärung aufschreiben, ob man zu einer Kirche gehört oder nicht? Weil …",noun,question,291,1,en
+stimmzettel,"der Stimmzettel, Stimmzettel",ballot paper,"Welcher Stimmzettel wäre bei einer Bundestagswahl gültig? In Anlehnung an Bundeswahlordnung (BWO), Anlage 26",noun,question,130,1,en
+stolperstein,"der Stolperstein, Stolpersteine",stumbling block,206. Woran erinnern die sogenannten „Stolpersteine“ in Deutschland?,noun,question,206,1,en
+strafgesetze,Strafgesetze,criminal laws,"In Deutschland sind Jugendliche ab 14 Jahren strafmündig. Das bedeutet: Jugendliche, die 14 Jahre und älter sind und gegen Strafgesetze verstoßen, …",word,question,263,1,en
+strafmündig,strafmündig,criminally liable,"In Deutschland sind Jugendliche ab 14 Jahren strafmündig. Das bedeutet: Jugendliche, die 14 Jahre und älter sind und gegen Strafgesetze verstoßen, …",word,question,263,1,en
+straftat,"die Straftat, Straftaten",offense,eine Straftat begangen hat und angeklagt wird.,noun,answer,139,1,en
+studium,"das Studium, Studien",study,"Welchen Schulabschluss braucht man normalerweise, um an einer Universität in Deutschland ein Studium zu beginnen?",noun,question,244,1,en
+stufe,"die Stufe, Stufen",level,Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?,noun,question,69,1,en
+tannenbaum,"der Tannenbaum, Tannenbäume",fir tree,einen Tannenbaum schmücken,noun,answer,271,1,en
+thema,das Thema,topic,Wo können Sie sich in Berlin über politische Themen informieren?,noun,question,BE-6,1,en
+tochter,"die Tochter, Töchter",daughter,Sie müssen die Entscheidung der volljährigen Tochter respektieren.,noun,answer,267,1,en
+tote,die Tote,dead,Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?,noun,question,235,1,en
+tragen,tragen,carry,Zu welchem Fest tragen Menschen in Deutschland bunte Kostüme und Masken?,verb,question,264,1,en
+treffen,"das Treffen, Treffen",meet,Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?,noun,question,235,1,en
+trennungsjahr,Trennungsjahr,year of separation,"In Deutschland dürfen Ehepaare sich scheiden lassen. Meistens müssen sie dazu das ""Trennungsjahr"" einhalten. Was bedeutet das?",word,question,254,1,en
+uhr,"die Uhr, Uhren",clock,um 22 Uhr,noun,answer,266,1,en
+umsatzsteuer,"die Umsatzsteuer, Umsatzsteuern",sales tax,Umsatzsteuer,noun,answer,285,1,en
+umstand,"der Umstand, Umstände",circumstance,Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?,noun,question,178,1,en
+umziehen,umziehen,move,"Wo müssen Sie sich anmelden, wenn Sie in Deutschland umziehen?",verb,question,253,1,en
+unantastbarkeit,die Unantastbarkeit,inviolability,die Unantastbarkeit der Menschenwürde,noun,answer,18,1,en
+unbedingt,unbedingt,absolutely,Ein Ehepaar möchte in Deutschland ein Restaurant eröffnen. Was braucht es dazu unbedingt?,word,question,256,1,en
+unbezahlt,unbezahlt,unpaid,Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.,word,answer,132,1,en
+ungerechtfertigt,ungerechtfertigter,unjustified,ungerechtfertigter Kündigung durch Ihre Chefin/Ihren Chef.,word,answer,136,1,en
+ungleichbehandlung,Ungleichbehandlung,unequal treatment,Ungleichbehandlung der Bürgerinnen und Bürger durch den Staat.,word,answer,17,1,en
+unrecht,das Unrecht,wrong,"Was kann ich in Deutschland machen, wenn mir meine Arbeitgeberin/mein Arbeitgeber zu Unrecht gekündigt hat?",noun,question,138,1,en
+unterbrechen,unterbrechen,interrupt,Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.,verb,answer,178,1,en
+unterliegen,unterliegen,subject to,Welchem Grundsatz unterliegen Wahlen in Deutschland? Wahlen in Deutschland sind …,verb,question,122,1,en
+unterschiedlich,unterschiedlichen,different,weil dadurch die unterschiedlichen Meinungen der Bürgerinnen und Bürger vertreten werden,word,answer,41,1,en
+unterstützung,"die Unterstützung, Unterstützungen",support,die Unterstützung einer Anwältin/eines Anwalts,noun,answer,275,1,en
+urlaubsreise,"die Urlaubsreise, Urlaubsreisen",vacation trip,Er bezahlt für alle Staatsangehörigen Urlaubsreisen.,noun,answer,47,1,en
+urteil,"das Urteil, Urteile",judgment,arbeitet an einem Gericht und spricht Urteile.,noun,answer,142,1,en
+verabschiedung,"die Verabschiedung, Verabschiedungen",Adoption,an die Verabschiedung des Grundgesetzes,noun,answer,220,1,en
+verantwortung,"die Verantwortung, Verantwortungen",responsibility,Woraus begründet sich Deutschlands besondere Verantwortung für Israel?,noun,question,288,1,en
+verband,"der Verband, Verbände",association,Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.,noun,answer,132,1,en
+verbot,"das Verbot, Verbote",forbidden,das Verbot von Parteien,noun,answer,170,1,en
+verbrechen,"das Verbrechen, Verbrechen",crime,aus den nationalsozialistischen Verbrechen gegen Juden,noun,answer,288,1,en
+verbreitung,"die Verbreitung, Verbreitungen",spread,bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen,noun,answer,16,1,en
+verdun,Verdun,evaporate,Der damalige französische Staatspräsident François Mitterrand und der damalige deutsche Bundeskanzler Helmut Kohl gedenken in Verdun gemeinsam der Toten beider Weltkriege. Welches Ziel der Europäischen Union wird bei diesem Treffen deutlich?,word,question,235,1,en
+verein,"der Verein, Vereine",association,Sie arbeiten freiwillig und unbezahlt in Vereinen und Verbänden.,noun,answer,132,1,en
+vereinbar,vereinbar,compatible,Was ist mit dem deutschen Grundgesetz vereinbar?,word,question,10,1,en
+vereinigung,"die Vereinigung, Vereinigungen",association,Wie nennt man in Deutschland die Vereinigung von Abgeordneten einer Partei im Parlament?,noun,question,89,1,en
+vereint,Vereinten,United,eine Resolution der Vereinten Nationen,word,answer,184,1,en
+verfahren,"das Verfahren, Verfahren",procedure,Wie nennt man in Deutschland ein Verfahren vor einem Gericht?,noun,question,146,1,en
+verfassungsorgan,"das Verfassungsorgan, Verfassungsorgane",constitutional body,Welches Organ gehört nicht zu den Verfassungsorganen Deutschlands?,noun,question,48,1,en
+verfassungswidrig,verfassungswidrig,unconstitutional,verfassungswidrig.,word,answer,20,1,en
+verfolgen,verfolgen,pursue,"Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …",verb,question,20,1,en
+vergebung,"die Vergebung, Vergebungen",forgiveness,Er bat Polen und die polnischen Juden um Vergebung.,noun,answer,181,1,en
+verhaften,verhaften,arrest,Menschen von einer Privatpolizei ohne Grund verhaftet werden.,verb,answer,51,1,en
+verhalten,"das Verhalten, Verhalten",behave,Was ist ein Beispiel für antisemitisches Verhalten?,noun,question,149,1,en
+verhältniswahlrecht,"das Verhältniswahlrecht, Verhältniswahlrechte",proportional representation,Mehrheits- und Verhältniswahlrecht.,noun,answer,120,1,en
+verkehr,"der Verkehr, Verkehre",traffic,Die Sowjetunion unterbrach den gesamten Verkehr auf dem Landwege.,noun,answer,178,1,en
+verletzen,verletzen,injure,Zwei Freunde wollen in ein öffentliches Schwimmbad in Deutschland. Beide haben eine dunkle Hautfarbe und werden deshalb nicht hineingelassen. Welches Recht wird in dieser Situation verletzt? Das Recht auf …,verb,question,281,1,en
+vernichtung,"die Vernichtung, Vernichtungen",destruction,der öffentliche Aufruf zur Vernichtung Israels,noun,answer,111,1,en
+versorgen,versorgen,supply,Vom Juni 1948 bis zum Mai 1949 wurden die Bürgerinnen und Bürger von West-Berlin durch eine Luftbrücke versorgt. Welcher Umstand war dafür verantwortlich?,verb,question,178,1,en
+verstehen,verstehen,understand,"Was versteht man unter dem Recht der ""Freizügigkeit"" in Deutschland?",verb,question,19,1,en
+verstoßen,verstoßen,violated,"In Deutschland sind Jugendliche ab 14 Jahren strafmündig. Das bedeutet: Jugendliche, die 14 Jahre und älter sind und gegen Strafgesetze verstoßen, …",verb,question,263,1,en
+verteilen,verteilen,distribute,Wie waren die Besatzungszonen Deutschlands nach 1945 verteilt?,verb,question,176,1,en
+verwaltungsaufbau,Verwaltungsaufbau,administrative structure,Die Bundesrepublik Deutschland hat einen dreistufigen Verwaltungsaufbau. Wie heißt die unterste politische Stufe?,word,question,69,1,en
+vielleicht,vielleicht,perhaps,Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.,word,answer,268,1,en
+volksaufstand,Volksaufstand,popular uprising,landesweite Streiks und ein Volksaufstand,word,answer,210,1,en
+volkshochschule,"die Volkshochschule, Volkshochschulen",adult education center,Die Volkshochschule in Deutschland ist eine Einrichtung …,noun,question,270,1,en
+voll,vollem,full,Wie heißt Deutschland mit vollem Namen?,word,question,212,1,en
+volljährig,volljährig,of legal age,Ab welchem Alter ist man in Deutschland volljährig?,word,question,246,1,en
+volljähriger,der Volljähriger,of age,Sie müssen die Entscheidung der volljährigen Tochter respektieren.,noun,answer,267,1,en
+voneinander,voneinander,from each other,sind Staat und Religionsgemeinschaften voneinander getrennt.,word,answer,33,1,en
+vorhang,"der Vorhang, Vorhänge",curtain,"Wofür stand der Ausdruck ""Eiserner Vorhang""? Für die Abschottung …",noun,question,185,1,en
+vorher,vorher,before,Maik und Sybille wollen mit Freunden an ihrem deutschen Wohnort eine Demonstration auf der Straße abhalten. Was müssen sie vorher tun?,word,question,243,1,en
+wahlbenachrichtigung,"die Wahlbenachrichtigung, Wahlbenachrichtigungen",election notification,eine Wahlbenachrichtigung von der Gemeinde,noun,answer,126,1,en
+wahlgesetz,Wahlgesetz,electoral law,"Warum gibt es die 5%-Hürde im Wahlgesetz der Bundesrepublik Deutschland? Es gibt sie, weil …",word,question,127,1,en
+wahlhelferin,Wahlhelferin,election assistant,Wahlhelferin/Wahlhelfer,word,answer,282,1,en
+wahlsystem,"das Wahlsystem, Wahlsysteme",voting system,Das Wahlsystem in Deutschland ist ein …,noun,question,120,1,en
+wappentier,"das Wappentier, Wappentiere",heraldic animal,Welches Tier ist das Wappentier der Bundesrepublik Deutschland?,noun,question,29,1,en
+wechseln,wechseln,change,"Wenn Abgeordnete im Deutschen Bundestag ihre Fraktion wechseln, …",verb,question,98,1,en
+weg,"der Weg, Wege",away,Niemand darf z.B. wegen einer Behinderung benachteiligt werden.,noun,answer,262,1,en
+wehren,wehren,defend,"Wenn Sie sich in Deutschland gegen einen falschen Steuerbescheid wehren wollen, müssen Sie …",verb,question,280,1,en
+weiter,weiter,more,Erwachsene müssen auch nach der Ausbildung immer weiter lernen.,word,answer,284,1,en
+weiterbildung,die Weiterbildung,further education,zur Weiterbildung.,noun,answer,270,1,en
+weiß,das Weiß,white,weiß-rot,noun,answer,BE-5,1,en
+welcch,Welchem,which,Welchem Grundsatz unterliegen Wahlen in Deutschland? Wahlen in Deutschland sind …,word,question,122,1,en
+welche,Welche,which,Welche ist die Flagge der Europäischen Union?,word,question,226,1,en
+welchen,Welchen,which,"Welchen Schulabschluss braucht man normalerweise, um an einer Universität in Deutschland ein Studium zu beginnen?",word,question,244,1,en
+wem,wem,to whom,"Zu wem gehörte die DDR im ""Kalten Krieg""?",word,question,202,1,en
+wende,"die Wende, Wenden",turn,"Warum nennt man die Zeit im Herbst 1989 in der DDR ""Die Wende""? In dieser Zeit veränderte sich die DDR politisch …",noun,question,196,1,en
+weste,"die Weste, Westen",vest,des Warschauer Pakts gegen den Westen,noun,answer,185,1,en
+widerspruch,"der Widerspruch, Widersprüche",contradiction,Ich lege Widerspruch bei der Behörde ein.,noun,answer,283,1,en
+wirken,wirken,work,Die deutschen Bundesländer wirken an der Gesetzgebung des Bundes mit durch …,verb,question,90,1,en
+wirtschaftlich,wirtschaftlichem,economic,"Womit kann man in der Bundesrepublik Deutschland geehrt werden, wenn man auf politischem, wirtschaftlichem, kulturellem, geistigem oder sozialem Gebiet eine besondere Leistung erbracht hat? Mit dem …",word,question,102,1,en
+wirtschaftsform,"die Wirtschaftsform, Wirtschaftsformen",economic form,Die Wirtschaftsform in Deutschland nennt man …,noun,question,50,1,en
+wirtschaftssystem,"das Wirtschaftssystem, Wirtschaftssysteme",economic system,Wie hieß das Wirtschaftssystem der DDR?,noun,question,203,1,en
+wirtschaftswunder,"das Wirtschaftswunder, Wirtschaftswunder",economic miracle,"Wann war in der Bundesrepublik Deutschland das ""Wirtschaftswunder""?",noun,question,183,1,en
+wissen,wissen,know,Die Frau bekommt ein Kind und ihr Chef weiß das.,verb,answer,104,1,en
+woche,"die Woche, Wochen",week,In Deutschland nennt man die letzten vier Wochen vor Weihnachten …,noun,question,296,1,en
+wofür,Wofür,for what,"Wofür stand der Ausdruck ""Eiserner Vorhang""? Für die Abschottung …",word,question,185,1,en
+wohin,Wohin,where to,"Wohin muss man in Deutschland zuerst gehen, wenn man heiraten möchte?",word,question,265,1,en
+woraus,Woraus,from which,Woraus begründet sich Deutschlands besondere Verantwortung für Israel?,word,question,288,1,en
+wort,"das Wort, Worte",word,Mit welchen Worten beginnt die deutsche Nationalhymne?,noun,question,40,1,en
+wählermehrheit,Wählermehrheit,voter majority,nach dem Willen der Wählermehrheit den Wechsel der Regierung zu ermöglichen.,word,answer,125,1,en
+zehn,"die Zehn, Zehnen",ten,Sie kann die Theorie-Prüfung vielleicht in ihrer Muttersprache machen. Es gibt mehr als zehn Sprachen zur Auswahl.,noun,answer,268,1,en
+zeigen,zeigen,show,Was zeigt dieses Bild?,verb,question,55,1,en
+zeitraum,"der Zeitraum, Zeiträume",period,In welchem Zeitraum gab es die Deutsche Demokratische Republik (DDR)?,noun,question,217,1,en
+zirkel,"der Zirkel, Zirkel",circle,"Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?",noun,question,187,1,en
+zuerst,zuerst,first,"Wohin muss man in Deutschland zuerst gehen, wenn man heiraten möchte?",word,question,265,1,en
+zukunft,"die Zukunft, Zukünfte",future,"Was man für die Arbeit können muss, ändert sich in Zukunft sehr schnell. Was kann man tun?",noun,question,284,1,en
+zurzeit,zurzeit,currently,Die beiden größten Fraktionen im Deutschen Bundestag heißen zurzeit …,word,question,73,1,en
+zusammenleben,zusammenleben,live together,Wer darf in Deutschland nicht als Paar zusammenleben?,verb,question,245,1,en
+zusammenschluss,"der Zusammenschluss, Zusammenschlüsse",merger,Der Begriff meint den Zusammenschluss europäischer Staaten zur EU.,noun,answer,231,1,en
+zuständiger,der Zuständiger,responsible,eine Gaststättenerlaubnis von der zuständigen Behörde,noun,answer,256,1,en
+zwangsarbeit,"die Zwangsarbeit, Zwangsarbeiten",forced labor,Zwangsarbeit,noun,answer,15,1,en
+zweijährig,zweijähriges,biennial,"Eine Frau, die ein zweijähriges Kind hat, bewirbt sich in Deutschland um eine Stelle. Was ist ein Beispiel für Diskriminierung? Sie bekommt die Stelle nur deshalb nicht, weil sie …",word,question,277,1,en
+ährenkranz,Ährenkranz,spike wreath,"Welcher deutsche Staat hatte eine schwarz-rot-goldene Flagge mit Hammer, Zirkel und Ährenkranz?",word,question,187,1,en
+ändern,ändern,Change,"Was man für die Arbeit können muss, ändert sich in Zukunft sehr schnell. Was kann man tun?",verb,question,284,1,en
+östlich,östlichen,east,Die heutigen fünf östlichen Bundesländer sind der Bundesrepublik Deutschland beigetreten.,word,answer,204,1,en
+übernehmen,übernehmen,take over,"Welches Ehrenamt müssen deutsche Staatsbürgerinnen und Staatsbürger übernehmen, wenn sie dazu aufgefordert werden?",verb,question,282,1,en
+überwachen,überwachen,monitor,die Einhaltung von Gesetzen zu überwachen,verb,answer,148,1,en
